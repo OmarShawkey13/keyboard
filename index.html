@@ -122,80 +122,69 @@
 <body>
 
 <div class="hero">
-    <div class="app-badge">Official Document</div>
-    <h1>Privacy Policy</h1>
-    <p class="subtitle">Commitment to User Data Protection & Transparency</p>
+    <div class="app-badge">Official Privacy Policy</div>
+    <h1>RCKeyBoard</h1>
+    <p class="subtitle">Last Updated: May 31, 2026</p>
 </div>
 
 <div class="container">
     <div class="main-card">
         <header>
-            <p>This Privacy Policy describes how <strong>RCKeyBoard</strong> (the "Application"), developed by <strong>Omar Shawkey</strong> ("Developer", "We", "Us"), handles your data. Our keyboard is engineered with a <strong>privacy-first</strong> architecture, ensuring that your personal data never leaves your device unless explicitly requested by you.</p>
+            <p>This Privacy Policy describes how <strong>RCKeyBoard</strong>, developed by <strong>Omar Shawkey</strong>, handles your data. We are committed to maintaining the highest standards of user privacy through a <strong>Local-First</strong> architecture.</p>
         </header>
 
         <div class="trust-summary">
             <div class="summary-item">
                 <strong>Typing Data</strong>
-                <span>100% Private</span>
+                <span>Never Collected</span>
             </div>
             <div class="summary-item">
-                <strong>Images/Themes</strong>
-                <span>Local Storage</span>
+                <strong>Cloud Sync</strong>
+                <span>Disabled (Off-line)</span>
             </div>
             <div class="summary-item">
-                <strong>Clipboard</strong>
-                <span>On-Device Only</span>
+                <strong>User Media</strong>
+                <span>Private URIs</span>
             </div>
         </div>
 
-        <h2>1. Zero-Collection Philosophy</h2>
-        <p>RCKeyBoard does not monitor, record, or transmit your keystrokes to any remote server. Your messages, passwords, and notes remain strictly on your physical device. We do not have access to what you type.</p>
+        <h2>1. Privacy by Design</h2>
+        <p>RCKeyBoard is engineered to be a standalone tool. We do not track, monitor, or transmit any text you type. This includes personal messages, passwords, or emails. All data stays on your device.</p>
 
-        <h2>2. Smart Features & Local Storage</h2>
+        <h2>2. Technical Feature Transparency</h2>
         <ul>
-            <li><strong>Learned Dictionary:</strong> The app learns your typing style to provide better suggestions. This data is stored in a local <code>SQLite/Room</code> database and is never synced to the cloud.</li>
-            <li><strong>Custom Themes:</strong> If you use a personal image for your keyboard background, the app accesses your media via secure Android URIs. We do not upload your photos to any server.</li>
-            <li><strong>Clipboard Manager:</strong> The app locally caches recently copied text to allow quick pasting. You can clear this history at any time, and it is never shared externally.</li>
-            <li><strong>Sensitive Fields:</strong> RCKeyBoard automatically detects password and credit card fields to disable learning and suggestions, preventing sensitive data caching.</li>
+            <li><strong>Intelligent Learning:</strong> Your personalized dictionary and bigram prediction data are stored in a secure <code>SQLite/Room</code> database located in the app's private storage. No cloud synchronization is utilized.</li>
+            <li><strong>Theming & Custom Backgrounds:</strong> When you personalize your keyboard using a custom image, the Application uses standard Android content URIs to load the image locally. No personal media is ever uploaded.</li>
+            <li><strong>Clipboard Management:</strong> The app locally caches copied text for your convenience. This history is stored in-memory or in local-only cache and can be cleared at any time.</li>
+            <li><strong>Secure Field Detection:</strong> The keyboard automatically identifies sensitive input fields (Passwords/Credit Cards) to suspend all learning and suggestions, ensuring no sensitive data is cached.</li>
         </ul>
 
         <div class="legal-notice">
-            <strong>Standard Android Warning:</strong> Android displays a default warning when you enable any third-party keyboard. We officially confirm that RCKeyBoard does <u>not</u> utilize its access to collect or store your private information.
+            <strong>Developer Guarantee:</strong> While Android displays a standard warning about third-party keyboards, RCKeyBoard officially guarantees that it does not use its access to collect or exploit your data.
         </div>
 
-        <h2>3. Permissions & Why We Need Them</h2>
+        <h2>3. Permissions & Usage</h2>
         <ul>
-            <li><strong>Internet Access:</strong> Required <u>only</u> for the <strong>Live Translation</strong> tool (sending specific text to translation providers at your request) and downloading Emoji assets.</li>
-            <li><strong>Vibrate & Audio:</strong> To provide tactile haptic feedback and audible key-press sounds.</li>
-            <li><strong>Media/Storage:</strong> Used exclusively to let you pick and apply custom background images for your keyboard themes.</li>
-            <li><strong>Microphone:</strong> Used only when you trigger the <strong>Voice Typing</strong> feature to hand over input to the system's voice engine.</li>
+            <li><strong>Vibrate:</strong> For tactile haptic feedback on key presses.</li>
+            <li><strong>Internet Access:</strong> Used exclusively for the optional <strong>Online Translation</strong> feature (at your request) and fetching high-quality Emoji assets. No typing logs are sent.</li>
+            <li><strong>Microphone:</strong> Used only when the Voice Typing feature is triggered to utilize the system's speech-to-text engine.</li>
         </ul>
 
-        <h2>4. Third-Party Integration</h2>
-        <p>We use limited third-party services to ensure stability and functionality:</p>
-        <ul>
-            <li><strong>Translation APIs:</strong> When you use the translation feature, the specific text is sent to the provider.</li>
-            <li><strong>Google Play Services:</strong> Used for basic crash analytics to fix bugs and improve performance.</li>
-        </ul>
-
-        <h2>5. Data Deletion</h2>
-        <p>You have full control. You can reset your learned dictionary, clear your custom themes, and wipe all application data at any time from the app settings or Android system settings.</p>
-
-        <h2>6. Developer Contact</h2>
-        <p>If you have any questions or concerns regarding your privacy, please contact me directly:</p>
-        <p style="background: var(--bg-light); padding: 15px; border-radius: 10px; display: inline-block; border: 1px dashed var(--accent);">
+        <h2>4. Contact & Support</h2>
+        <p>If you have any questions regarding this policy or your data privacy, please contact me directly:</p>
+        <p style="background: var(--bg-light); padding: 20px; border-radius: 12px; border: 1px solid var(--accent); display: inline-block;">
             <strong>Email:</strong> omar.mohamed.flutter@gmail.com<br>
             <strong>Developer:</strong> Omar Shawkey
         </p>
 
         <p style="margin-top: 40px; font-size: 13px; color: var(--text-main); opacity: 0.6;">
-            Last updated: October 24, 2025. This policy reflects the latest privacy standards of RCKeyBoard.
+            &copy; 2026 Omar Shawkey. This policy reflects the latest operational state of the RCKeyBoard application as of May 31, 2026.
         </p>
     </div>
 </div>
 
 <footer>
-    &copy; 2025 RCKeyBoard | Built for Privacy by Omar Shawkey
+    Designed for Privacy. Built for Speed.
 </footer>
 
 </body>
