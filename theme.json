@@ -142,5 +142,96 @@
     "shadowColor": "#9CA3AF",
     "cornerRadius": 12.0,
     "hasBorders": false
+  },
+  [
+  {
+    "id": "preset_sakura",
+    "bgColor": "#FFF5F8",
+    "keyColor": "#FFB7B2",
+    "textColor": "#631F2A",
+    "shadowColor": "#FFD6DF",
+    "cornerRadius": 24.0,
+    "hasBorders": false
+  },
+  {
+    "id": "preset_cotton_candy",
+    "bgColor": "#FDF0F5",
+    "keyColor": "#FFD1E3",
+    "textColor": "#8A2A5B",
+    "shadowColor": "#F4D7E3",
+    "cornerRadius": 20.0,
+    "hasBorders": false
+  },
+  {
+    "id": "preset_lilac_dream",
+    "bgColor": "#F8F5FA",
+    "keyColor": "#E2D1F0",
+    "textColor": "#4A2364",
+    "shadowColor": "#DBC1ED",
+    "cornerRadius": 16.0,
+    "hasBorders": false
+  },
+  {
+    "id": "preset_peachy",
+    "bgColor": "#FFF7F5",
+    "keyColor": "#FFDAB9",
+    "textColor": "#8B4513",
+    "shadowColor": "#FFE4E1",
+    "cornerRadius": 18.0,
+    "hasBorders": true
+  },
+  {
+    "id": "preset_berry_glam",
+    "bgColor": "#2D1124",
+    "keyColor": "#6B2754",
+    "textColor": "#FFD1ED",
+    "shadowColor": "#1A0915",
+    "cornerRadius": 12.0,
+    "hasBorders": false
+  },
+  {
+    "id": "preset_rose_petal",
+    "bgColor": "#FFE4E1",
+    "keyColor": "#FFC0CB",
+    "textColor": "#8B0A50",
+    "shadowColor": "#FFB6C1",
+    "cornerRadius": 22.0,
+    "hasBorders": false
+  },
+  {
+    "id": "preset_tiffany_elegance",
+    "bgColor": "#F0FFFF",
+    "keyColor": "#81D8D0",
+    "textColor": "#004B49",
+    "shadowColor": "#AFEEEE",
+    "cornerRadius": 14.0,
+    "hasBorders": true
+  },
+  {
+    "id": "preset_magenta_velvet",
+    "bgColor": "#4A0E4E",
+    "keyColor": "#81176D",
+    "textColor": "#F8E5F8",
+    "shadowColor": "#2A082D",
+    "cornerRadius": 16.0,
+    "hasBorders": false
+  },
+  {
+    "id": "preset_lavender_blush",
+    "bgColor": "#FFF0F5",
+    "keyColor": "#E6E6FA",
+    "textColor": "#483D8B",
+    "shadowColor": "#D8BFD8",
+    "cornerRadius": 20.0,
+    "hasBorders": true
+  },
+  {
+    "id": "preset_golden_rose",
+    "bgColor": "#1A1A1A",
+    "keyColor": "#B76E79",
+    "textColor": "#F0E6D2",
+    "shadowColor": "#000000",
+    "cornerRadius": 12.0,
+    "hasBorders": true
   }
 ]
