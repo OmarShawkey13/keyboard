@@ -70,5 +70,77 @@
     "shadowColor": "#FFF1F2",
     "cornerRadius": 14.0,
     "hasBorders": true
+  },
+  {
+    "id": "preset_m3_light",
+    "bgColor": "#FDF8FD",
+    "keyColor": "#EADDFF",
+    "textColor": "#21005D",
+    "shadowColor": "#E6E0E9",
+    "cornerRadius": 24.0,
+    "hasBorders": false
+  },
+  {
+    "id": "preset_m3_dark",
+    "bgColor": "#1C1B1F",
+    "keyColor": "#4A4458",
+    "textColor": "#E8DEF8",
+    "shadowColor": "#000000",
+    "cornerRadius": 24.0,
+    "hasBorders": false
+  },
+  {
+    "id": "preset_matcha",
+    "bgColor": "#F4F7F4",
+    "keyColor": "#CCE8CD",
+    "textColor": "#0F5223",
+    "shadowColor": "#DCE5DC",
+    "cornerRadius": 16.0,
+    "hasBorders": false
+  },
+  {
+    "id": "preset_mocha",
+    "bgColor": "#FAF6F0",
+    "keyColor": "#E4D4C8",
+    "textColor": "#4A3B32",
+    "shadowColor": "#EAE0D5",
+    "cornerRadius": 16.0,
+    "hasBorders": false
+  },
+  {
+    "id": "preset_amoled",
+    "bgColor": "#000000",
+    "keyColor": "#1A1A1A",
+    "textColor": "#FFFFFF",
+    "shadowColor": null,
+    "cornerRadius": 12.0,
+    "hasBorders": true
+  },
+  {
+    "id": "preset_nord",
+    "bgColor": "#2E3440",
+    "keyColor": "#434C5E",
+    "textColor": "#D8DEE9",
+    "shadowColor": "#242933",
+    "cornerRadius": 8.0,
+    "hasBorders": false
+  },
+  {
+    "id": "preset_rose_gold",
+    "bgColor": "#FFF8F6",
+    "keyColor": "#FFD8D4",
+    "textColor": "#3B0909",
+    "shadowColor": "#F5DADA",
+    "cornerRadius": 20.0,
+    "hasBorders": false
+  },
+  {
+    "id": "preset_minimal_grey",
+    "bgColor": "#D1D5DB",
+    "keyColor": "#F3F4F6",
+    "textColor": "#111827",
+    "shadowColor": "#9CA3AF",
+    "cornerRadius": 12.0,
+    "hasBorders": false
   }
 ]
