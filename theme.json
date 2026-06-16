@@ -1,0 +1,74 @@
+[
+  {
+    "id": "preset_classic",
+    "bgColor": null,
+    "keyColor": null,
+    "textColor": null,
+    "shadowColor": null,
+    "cornerRadius": 10.0,
+    "hasBorders": true
+  },
+  {
+    "id": "preset_cyberpunk",
+    "bgColor": "#1E1E2E",
+    "keyColor": "#F38BA8",
+    "textColor": "#89DCEB",
+    "shadowColor": "#11111B",
+    "cornerRadius": 4.0,
+    "hasBorders": false
+  },
+  {
+    "id": "preset_neon",
+    "bgColor": "#4C1D95",
+    "keyColor": "#EC4899",
+    "textColor": "#FDE047",
+    "shadowColor": "#2E1065",
+    "cornerRadius": 20.0,
+    "hasBorders": true
+  },
+  {
+    "id": "preset_midnight",
+    "bgColor": "#1C1C1E",
+    "keyColor": "#2C2C2E",
+    "textColor": "#F2F2F7",
+    "shadowColor": "#000000",
+    "cornerRadius": 8.0,
+    "hasBorders": false
+  },
+  {
+    "id": "preset_mint",
+    "bgColor": "#FFFFFF",
+    "keyColor": "#A7F3D0",
+    "textColor": "#065F46",
+    "shadowColor": "#ECFDF5",
+    "cornerRadius": 14.0,
+    "hasBorders": true
+  },
+  {
+    "id": "preset_lavender",
+    "bgColor": "#FFFFFF",
+    "keyColor": "#E9D5FF",
+    "textColor": "#4C1D95",
+    "shadowColor": "#FAF5FF",
+    "cornerRadius": 16.0,
+    "hasBorders": true
+  },
+  {
+    "id": "preset_ocean",
+    "bgColor": "#1E293B",
+    "keyColor": "#3B82F6",
+    "textColor": "#93C5FD",
+    "shadowColor": "#0F172A",
+    "cornerRadius": 6.0,
+    "hasBorders": false
+  },
+  {
+    "id": "preset_sunset",
+    "bgColor": "#FFFFFF",
+    "keyColor": "#FDA4AF",
+    "textColor": "#881337",
+    "shadowColor": "#FFF1F2",
+    "cornerRadius": 14.0,
+    "hasBorders": true
+  }
+]
