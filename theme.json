@@ -358,5 +358,95 @@
     "shadowColor": "#0A0232",
     "cornerRadius": 10.0,
     "hasBorders": false
+  },
+  {
+    "id": "preset_dracula",
+    "bgColor": "#282A36",
+    "keyColor": "#44475A",
+    "textColor": "#FF79C6",
+    "shadowColor": "#191A21",
+    "cornerRadius": 12.0,
+    "hasBorders": false
+  },
+  {
+    "id": "preset_solarized_dark",
+    "bgColor": "#002B36",
+    "keyColor": "#073642",
+    "textColor": "#2AA198",
+    "shadowColor": "#001E26",
+    "cornerRadius": 8.0,
+    "hasBorders": true
+  },
+  {
+    "id": "preset_solarized_light",
+    "bgColor": "#FDF6E3",
+    "keyColor": "#EEE8D5",
+    "textColor": "#268BD2",
+    "shadowColor": "#D5D0C0",
+    "cornerRadius": 8.0,
+    "hasBorders": true
+  },
+  {
+    "id": "preset_monokai",
+    "bgColor": "#272822",
+    "keyColor": "#3E3D32",
+    "textColor": "#A6E22E",
+    "shadowColor": "#171814",
+    "cornerRadius": 10.0,
+    "hasBorders": false
+  },
+  {
+    "id": "preset_crimson_blood",
+    "bgColor": "#3B0000",
+    "keyColor": "#660000",
+    "textColor": "#FFD4D4",
+    "shadowColor": "#220000",
+    "cornerRadius": 16.0,
+    "hasBorders": false
+  },
+  {
+    "id": "preset_deep_ocean",
+    "bgColor": "#011627",
+    "keyColor": "#1D3B53",
+    "textColor": "#4DFFC1",
+    "shadowColor": "#010D18",
+    "cornerRadius": 14.0,
+    "hasBorders": true
+  },
+  {
+    "id": "preset_gruvbox",
+    "bgColor": "#282828",
+    "keyColor": "#3C3836",
+    "textColor": "#FABD2F",
+    "shadowColor": "#1D2021",
+    "cornerRadius": 10.0,
+    "hasBorders": false
+  },
+  {
+    "id": "preset_macchiato",
+    "bgColor": "#24273A",
+    "keyColor": "#363A4F",
+    "textColor": "#F5A97F",
+    "shadowColor": "#181825",
+    "cornerRadius": 20.0,
+    "hasBorders": false
+  },
+  {
+    "id": "preset_ios_classic",
+    "bgColor": "#D1D5DB",
+    "keyColor": "#FFFFFF",
+    "textColor": "#000000",
+    "shadowColor": "#8B9097",
+    "cornerRadius": 10.0,
+    "hasBorders": true
+  },
+  {
+    "id": "preset_cyber_neon",
+    "bgColor": "#090A0F",
+    "keyColor": "#1B1D2C",
+    "textColor": "#00FFCC",
+    "shadowColor": "#000000",
+    "cornerRadius": 6.0,
+    "hasBorders": true
   }
 ]
