@@ -1,0 +1,42 @@
+[
+  {
+    "id": "preset_classic",
+    "metadata": {
+      "name": "Classic Light",
+      "author": "RCMods"
+    },
+    "background": {
+      "type": "color",
+      "value": null,
+      "opacity": 1.0
+    },
+    "keys": {
+      "primaryColor": null,
+      "specialColor": null,
+      "textColor": null,
+      "shadowColor": null,
+      "cornerRadius": 10.0,
+      "hasShadow": true
+    }
+  },
+  {
+    "id": "preset_cyber_hacker",
+    "metadata": {
+      "name": "Cyber Hacker",
+      "author": "Omar"
+    },
+    "background": {
+      "type": "image",
+      "value": "https://raw.githubusercontent.com/OmarShawkey13/keyboard/refs/heads/main/images/test.png",
+      "opacity": 0.85
+    },
+    "keys": {
+      "primaryColor": "#991E1E2E", 
+      "specialColor": "#99313244",
+      "textColor": "#00FF00",
+      "shadowColor": "#000000",
+      "cornerRadius": 4.0,
+      "hasShadow": false
+    }
+  }
+]
