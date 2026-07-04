@@ -1,42 +1,202 @@
 [
   {
-    "id": "preset_classic",
+    "id": "preset_classic_light",
     "metadata": {
       "name": "Classic Light",
-      "author": "RCMods"
+      "author": "Omar Shawkey"
     },
     "background": {
       "type": "color",
-      "value": null,
+      "value": "#F0F2F5",
       "opacity": 1.0
     },
     "keys": {
-      "primaryColor": null,
-      "specialColor": null,
-      "textColor": null,
-      "shadowColor": null,
-      "cornerRadius": 10.0,
+      "primaryColor": "#FFFFFF",
+      "specialColor": "#E4E6EB",
+      "textColor": "#1C1E21",
+      "shadowColor": "#CCCCCC",
+      "cornerRadius": 8.0,
       "hasShadow": true
     }
   },
   {
-    "id": "preset_cyber_hacker",
+    "id": "preset_amoled_pure",
     "metadata": {
-      "name": "Cyber Hacker",
-      "author": "Omar"
+      "name": "AMOLED Dark",
+      "author": "Omar Shawkey"
     },
     "background": {
-      "type": "image",
-      "value": "https://raw.githubusercontent.com/OmarShawkey13/keyboard/refs/heads/main/images/17.jpg",
-      "opacity": 0.85
+      "type": "color",
+      "value": "#000000",
+      "opacity": 1.0
     },
     "keys": {
-      "primaryColor": "#991E1E2E", 
-      "specialColor": "#99313244",
-      "textColor": "#00FF00",
+      "primaryColor": "#121212",
+      "specialColor": "#1F1F1F",
+      "textColor": "#FFFFFF",
       "shadowColor": "#000000",
-      "cornerRadius": 4.0,
+      "cornerRadius": 10.0,
       "hasShadow": false
+    }
+  },
+  {
+    "id": "preset_midnight_blue",
+    "metadata": {
+      "name": "Midnight Blue",
+      "author": "Omar Shawkey"
+    },
+    "background": {
+      "type": "color",
+      "value": "#0A192F",
+      "opacity": 1.0
+    },
+    "keys": {
+      "primaryColor": "#172A45",
+      "specialColor": "#303C55",
+      "textColor": "#64FFDA",
+      "shadowColor": "#020C1B",
+      "cornerRadius": 12.0,
+      "hasShadow": true
+    }
+  },
+  {
+    "id": "preset_catppuccin",
+    "metadata": {
+      "name": "Soft Mocha",
+      "author": "Omar Shawkey"
+    },
+    "background": {
+      "type": "color",
+      "value": "#1E1E2E",
+      "opacity": 1.0
+    },
+    "keys": {
+      "primaryColor": "#313244",
+      "specialColor": "#45475A",
+      "textColor": "#CDD6F4",
+      "shadowColor": "#11111B",
+      "cornerRadius": 14.0,
+      "hasShadow": true
+    }
+  },
+  {
+    "id": "preset_dracula",
+    "metadata": {
+      "name": "Dracula",
+      "author": "Omar Shawkey"
+    },
+    "background": {
+      "type": "color",
+      "value": "#282A36",
+      "opacity": 1.0
+    },
+    "keys": {
+      "primaryColor": "#44475A",
+      "specialColor": "#6272A4",
+      "textColor": "#F8F8F2",
+      "shadowColor": "#191A21",
+      "cornerRadius": 8.0,
+      "hasShadow": true
+    }
+  },
+  {
+    "id": "preset_emerald_forest",
+    "metadata": {
+      "name": "Emerald Forest",
+      "author": "Omar Shawkey"
+    },
+    "background": {
+      "type": "color",
+      "value": "#0D2818",
+      "opacity": 1.0
+    },
+    "keys": {
+      "primaryColor": "#1B4332",
+      "specialColor": "#2D6A4F",
+      "textColor": "#D8F3DC",
+      "shadowColor": "#051A0E",
+      "cornerRadius": 6.0,
+      "hasShadow": false
+    }
+  },
+  {
+    "id": "preset_pastel_lavender",
+    "metadata": {
+      "name": "Pastel Lavender",
+      "author": "Omar Shawkey"
+    },
+    "background": {
+      "type": "color",
+      "value": "#F3E8FF",
+      "opacity": 1.0
+    },
+    "keys": {
+      "primaryColor": "#FFFFFF",
+      "specialColor": "#E9D5FF",
+      "textColor": "#581C87",
+      "shadowColor": "#D8B4FE",
+      "cornerRadius": 16.0,
+      "hasShadow": true
+    }
+  },
+  {
+    "id": "preset_sunset_orange",
+    "metadata": {
+      "name": "Sunset Warmth",
+      "author": "Omar Shawkey"
+    },
+    "background": {
+      "type": "color",
+      "value": "#2C1810",
+      "opacity": 1.0
+    },
+    "keys": {
+      "primaryColor": "#4A2511",
+      "specialColor": "#6B3014",
+      "textColor": "#FFD166",
+      "shadowColor": "#1A0E09",
+      "cornerRadius": 10.0,
+      "hasShadow": false
+    }
+  },
+  {
+    "id": "preset_cyber_neon",
+    "metadata": {
+      "name": "Cyber Neon",
+      "author": "Omar Shawkey"
+    },
+    "background": {
+      "type": "color",
+      "value": "#0A0A12",
+      "opacity": 1.0
+    },
+    "keys": {
+      "primaryColor": "#1A1A2E",
+      "specialColor": "#16213E",
+      "textColor": "#00FFC2",
+      "shadowColor": "#E94560",
+      "cornerRadius": 4.0,
+      "hasShadow": true
+    }
+  },
+  {
+    "id": "preset_retro_cream",
+    "metadata": {
+      "name": "Retro Typewriter",
+      "author": "Omar Shawkey"
+    },
+    "background": {
+      "type": "color",
+      "value": "#EAE0C8",
+      "opacity": 1.0
+    },
+    "keys": {
+      "primaryColor": "#F7F0E1",
+      "specialColor": "#D6C7A7",
+      "textColor": "#3B3228",
+      "shadowColor": "#BDB088",
+      "cornerRadius": 8.0,
+      "hasShadow": true
     }
   }
 ]
