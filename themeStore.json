@@ -198,5 +198,25 @@
       "cornerRadius": 8.0,
       "hasShadow": true
     }
+  },
+  {
+  "id": "preset_image_17",
+  "metadata": {
+    "name": "Aesthetic Vibe 17",
+    "author": "Omar Shawkey"
+  },
+  "background": {
+    "type": "image",
+    "value": "https://raw.githubusercontent.com/OmarShawkey13/keyboard/main/images/17.jpg",
+    "opacity": 0.85
+  },
+  "keys": {
+    "primaryColor": "#2A2D34",
+    "specialColor": "#1A1C20",
+    "textColor": "#FFFFFF",
+    "shadowColor": "#0F1013",
+    "cornerRadius": 12.0,
+    "hasShadow": true
   }
+}
 ]
