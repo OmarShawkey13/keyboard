@@ -7,5 +7,14 @@
     "downloadUrl": "https://raw.githubusercontent.com/OmarShawkey13/keyboard/main/themes/Penguin.zip",
     "isPremium": false,
     "productId": null
+  },
+  {
+    "id": "penguin_elite",
+    "name": "Penguin Elite",
+    "author": "Omar Shawkey",
+    "previewUrl": "https://raw.githubusercontent.com/OmarShawkey13/keyboard/main/images/penguin_elite.jpeg",
+    "downloadUrl": "https://raw.githubusercontent.com/OmarShawkey13/keyboard/main/themes/penguin_elite.zip",
+    "isPremium": true,
+    "productId": "penguin_elite_1"
   }
 ]
