@@ -5,7 +5,7 @@
     "author": "Omar Shawkey",
     "previewUrl": "https://raw.githubusercontent.com/OmarShawkey13/keyboard/main/images/Penguin.jpeg",
     "downloadUrl": "https://raw.githubusercontent.com/OmarShawkey13/keyboard/main/themes/Penguin.zip",
-    "isPremium": true,
-    "productId": "theme_penguin_01"
+    "isPremium": false,
+    "productId": null
   }
 ]
