@@ -6,46 +6,33 @@
     <title>Privacy Policy - RCKeyBoard</title>
     <style>
         :root {
-            /* Light Theme Variables */
-            --bg-base: #f4f5f7;
-            --surface-color: rgba(255, 255, 255, 0.85);
-            --surface-solid: #ffffff;
-            --primary-color: #005ce6;
-            --primary-light: rgba(0, 92, 230, 0.08);
-            --text-primary: #111113;
-            --text-secondary: #5e5e62;
-            --border-color: rgba(0, 0, 0, 0.08);
-            --warning-bg: rgba(255, 170, 0, 0.06);
-            --warning-border: rgba(255, 170, 0, 0.3);
-            --warning-text: #b37700;
-            --info-bg: rgba(0, 122, 255, 0.05);
-            --info-border: rgba(0, 122, 255, 0.2);
-            --info-text: #0052cc;
-            --shadow-sm: 0 4px 12px rgba(0,0,0,0.03);
-            --shadow-lg: 0 16px 40px rgba(0,0,0,0.06);
-            --radius-sm: 12px;
+            /* Design System */
+            --bg-base: #f8f9fa;
+            --surface: #ffffff;
+            --primary: #007aff;
+            --primary-soft: rgba(0, 122, 255, 0.08);
+            --text-main: #1d1d1f;
+            --text-muted: #6e6e73;
+            --border: rgba(0, 0, 0, 0.1);
+            --success: #34c759;
+            --warning: #ff9500;
+            --danger: #ff3b30;
             --radius-lg: 24px;
+            --radius-md: 16px;
+            --shadow: 0 10px 30px rgba(0,0,0,0.05);
+            --font-main: -apple-system, BlinkMacSystemFont, "SF Pro Text", "Helvetica Neue", sans-serif;
         }
 
         @media (prefers-color-scheme: dark) {
             :root {
-                /* Dark Theme Variables */
                 --bg-base: #000000;
-                --surface-color: rgba(28, 28, 30, 0.7);
-                --surface-solid: #1c1c1e;
-                --primary-color: #0a84ff;
-                --primary-light: rgba(10, 132, 255, 0.12);
-                --text-primary: #f5f5f7;
-                --text-secondary: #98989d;
-                --border-color: rgba(255, 255, 255, 0.08);
-                --warning-bg: rgba(255, 159, 10, 0.1);
-                --warning-border: rgba(255, 159, 10, 0.3);
-                --warning-text: #ffb340;
-                --info-bg: rgba(10, 132, 255, 0.1);
-                --info-border: rgba(10, 132, 255, 0.25);
-                --info-text: #66b8ff;
-                --shadow-sm: 0 4px 12px rgba(0,0,0,0.3);
-                --shadow-lg: 0 16px 40px rgba(0,0,0,0.5);
+                --surface: #1c1c1e;
+                --primary: #0a84ff;
+                --primary-soft: rgba(10, 132, 255, 0.15);
+                --text-main: #f5f5f7;
+                --text-muted: #86868b;
+                --border: rgba(255, 255, 255, 0.15);
+                --shadow: 0 10px 30px rgba(0,0,0,0.5);
             }
         }
 
@@ -56,413 +43,306 @@
         }
 
         body {
-            font-family: -apple-system, BlinkMacSystemFont, "Inter", "Segoe UI", Roboto, Helvetica, Arial, sans-serif;
+            font-family: var(--font-main);
             background-color: var(--bg-base);
-            color: var(--text-primary);
+            color: var(--text-main);
             line-height: 1.6;
             -webkit-font-smoothing: antialiased;
-            overflow-x: hidden;
-            position: relative;
-        }
-
-        /* Ambient Glow Effect */
-        body::before {
-            content: "";
-            position: absolute;
-            top: -20%;
-            left: -10%;
-            width: 120%;
-            height: 60vh;
-            background: radial-gradient(circle at 50% 0%, var(--primary-light) 0%, transparent 70%);
-            z-index: -1;
-            pointer-events: none;
         }
 
         .container {
-            max-width: 860px;
+            max-width: 900px;
             margin: 0 auto;
-            padding: clamp(40px, 8vw, 80px) clamp(20px, 5vw, 40px) 100px;
-            animation: fadeIn 0.8s cubic-bezier(0.16, 1, 0.3, 1) forwards;
+            padding: 60px 24px;
         }
 
-        @keyframes fadeIn {
-            from { opacity: 0; transform: translateY(20px); }
-            to { opacity: 1; transform: translateY(0); }
-        }
-
-        /* Hero Header */
-        header {
+        /* Hero */
+        .hero {
             text-align: center;
-            margin-bottom: clamp(40px, 8vw, 64px);
+            margin-bottom: 60px;
+            animation: slideUp 0.8s cubic-bezier(0.2, 0.8, 0.2, 1);
         }
 
-        .subtitle {
-            color: var(--primary-color);
-            font-weight: 700;
-            font-size: clamp(12px, 2vw, 14px);
-            text-transform: uppercase;
-            letter-spacing: 2px;
-            margin-bottom: 16px;
-            display: inline-block;
-            background: var(--primary-light);
-            padding: 6px 16px;
-            border-radius: 100px;
+        .logo-ring {
+            width: 80px;
+            height: 80px;
+            background: var(--primary-soft);
+            border-radius: 50%;
+            display: flex;
+            align-items: center;
+            justify-content: center;
+            margin: 0 auto 24px;
+            font-size: 40px;
         }
 
         h1 {
-            font-size: clamp(36px, 8vw, 56px);
+            font-size: 48px;
             font-weight: 800;
             letter-spacing: -1.5px;
-            margin-bottom: 16px;
-            line-height: 1.1;
-            background: linear-gradient(135deg, var(--text-primary), var(--text-secondary));
-            -webkit-background-clip: text;
-            -webkit-text-fill-color: transparent;
-        }
-
-        .last-updated {
-            color: var(--text-secondary);
-            font-size: clamp(14px, 3vw, 16px);
-            font-weight: 500;
-        }
-
-        /* Intro Text */
-        .intro-text {
-            font-size: clamp(18px, 4vw, 22px);
-            color: var(--text-secondary);
-            margin-bottom: clamp(40px, 8vw, 56px);
-            text-align: center;
-            max-width: 700px;
-            margin-left: auto;
-            margin-right: auto;
-            line-height: 1.5;
-            font-weight: 400;
-        }
-
-        /* Key Metrics Grid */
-        .metrics-grid {
-            display: grid;
-            grid-template-columns: repeat(auto-fit, minmax(220px, 1fr));
-            gap: 20px;
-            margin-bottom: clamp(40px, 8vw, 64px);
-        }
-
-        .metric-card {
-            background: var(--surface-color);
-            backdrop-filter: blur(20px);
-            -webkit-backdrop-filter: blur(20px);
-            padding: 24px;
-            border-radius: var(--radius-lg);
-            box-shadow: var(--shadow-sm);
-            border: 1px solid var(--border-color);
-            text-align: center;
-            transition: all 0.3s cubic-bezier(0.16, 1, 0.3, 1);
-        }
-        
-        .metric-card:hover {
-            transform: translateY(-4px) scale(1.02);
-            box-shadow: var(--shadow-lg);
-            border-color: var(--primary-light);
-        }
-
-        .metric-title {
-            font-size: 13px;
-            color: var(--text-secondary);
-            font-weight: 600;
-            text-transform: uppercase;
-            letter-spacing: 1px;
             margin-bottom: 8px;
         }
 
-        .metric-value {
-            font-size: clamp(16px, 4vw, 18px);
-            font-weight: 700;
-            color: var(--primary-color);
+        .tagline {
+            color: var(--text-muted);
+            font-size: 18px;
         }
 
-        /* Content Sections */
-        section {
-            background: var(--surface-solid);
+        /* TL;DR Summary Section */
+        .summary-card {
+            background: var(--primary-soft);
             border-radius: var(--radius-lg);
-            padding: clamp(32px, 6vw, 48px);
-            margin-bottom: 32px;
-            box-shadow: var(--shadow-sm);
-            border: 1px solid var(--border-color);
-            transition: box-shadow 0.3s ease;
+            padding: 32px;
+            margin-bottom: 40px;
+            display: grid;
+            grid-template-columns: repeat(auto-fit, minmax(200px, 1fr));
+            gap: 24px;
+            border: 1px solid var(--primary);
         }
 
-        section:hover {
-            box-shadow: var(--shadow-lg);
-        }
-
-        h2 {
-            font-size: clamp(22px, 5vw, 28px);
-            font-weight: 700;
-            margin-bottom: 24px;
-            color: var(--text-primary);
-            letter-spacing: -0.5px;
+        .summary-item {
             display: flex;
-            align-items: center;
-        }
-
-        .number {
-            background: var(--primary-light);
-            color: var(--primary-color);
-            width: 36px;
-            height: 36px;
-            border-radius: 50%;
-            display: inline-flex;
-            align-items: center;
-            justify-content: center;
-            font-size: 16px;
-            font-weight: 700;
-            margin-right: 16px;
-            flex-shrink: 0;
-        }
-
-        p {
-            margin-bottom: 20px;
-            color: var(--text-secondary);
-            font-size: clamp(16px, 3.5vw, 17px);
-        }
-
-        ul {
-            list-style: none;
-            margin-bottom: 20px;
-            display: flex;
-            flex-direction: column;
+            align-items: flex-start;
             gap: 16px;
         }
 
-        li {
-            position: relative;
-            padding-left: 28px;
-            color: var(--text-secondary);
-            font-size: clamp(15px, 3.5vw, 16px);
-            line-height: 1.5;
-        }
-
-        li::before {
-            content: "";
-            background-color: var(--primary-color);
-            width: 6px;
-            height: 6px;
-            border-radius: 50%;
-            position: absolute;
-            left: 0;
-            top: 10px;
-        }
-
-        strong {
-            color: var(--text-primary);
-            font-weight: 600;
-        }
-
-        /* Info Card */
-        .info-card {
-            background: var(--info-bg);
-            border: 1px solid var(--info-border);
-            border-radius: var(--radius-sm);
-            padding: clamp(20px, 4vw, 32px);
-            margin-top: 32px;
-        }
-
-        .info-card p, .info-card li {
-            color: var(--info-text);
-        }
-
-        .info-card strong {
-            color: var(--primary-color);
-        }
-
-        /* Warning Card */
-        .warning-card {
-            background: var(--warning-bg);
-            border: 1px solid var(--warning-border);
-            border-radius: var(--radius-sm);
-            padding: clamp(20px, 4vw, 32px);
-            margin-top: 32px;
-            display: flex;
-            gap: 20px;
-            align-items: flex-start;
-        }
-
-        .warning-icon {
-            font-size: 28px;
-            line-height: 1;
-            flex-shrink: 0;
-            background: var(--surface-solid);
+        .summary-icon {
+            font-size: 24px;
+            background: var(--surface);
             width: 48px;
             height: 48px;
             display: flex;
             align-items: center;
             justify-content: center;
-            border-radius: 50%;
-            box-shadow: var(--shadow-sm);
+            border-radius: 12px;
+            flex-shrink: 0;
+            box-shadow: var(--shadow);
         }
 
-        .warning-content h3 {
-            color: var(--warning-text);
-            font-size: 18px;
-            margin-bottom: 8px;
-            font-weight: 700;
+        .summary-text h3 {
+            font-size: 16px;
+            margin-bottom: 4px;
         }
 
-        .warning-content p {
-            color: var(--warning-text);
-            margin: 0;
-            font-size: clamp(15px, 3.5vw, 16px);
-            line-height: 1.5;
+        .summary-text p {
+            font-size: 14px;
+            color: var(--text-muted);
         }
 
-        /* Contact Section */
-        .contact-info {
-            display: flex;
-            flex-direction: column;
-            gap: 16px;
-            margin-top: 32px;
-            background: var(--primary-light);
-            padding: 24px;
-            border-radius: var(--radius-sm);
+        /* Content Blocks */
+        section {
+            background: var(--surface);
+            border-radius: var(--radius-lg);
+            padding: 40px;
+            margin-bottom: 24px;
+            box-shadow: var(--shadow);
+            border: 1px solid var(--border);
+            transition: transform 0.3s ease;
         }
 
-        .contact-item {
+        section:hover {
+            transform: translateY(-2px);
+        }
+
+        h2 {
+            font-size: 24px;
+            margin-bottom: 20px;
             display: flex;
             align-items: center;
             gap: 12px;
-            color: var(--text-primary);
-            font-weight: 500;
         }
 
-        .contact-item a {
-            color: var(--primary-color);
-            text-decoration: none;
-            font-weight: 600;
-            transition: opacity 0.2s;
+        p {
+            margin-bottom: 16px;
+            color: var(--text-muted);
         }
 
-        .contact-item a:hover {
-            opacity: 0.8;
-            text-decoration: underline;
+        .badge {
+            display: inline-block;
+            padding: 4px 12px;
+            border-radius: 100px;
+            font-size: 12px;
+            font-weight: 700;
+            text-transform: uppercase;
+            margin-bottom: 12px;
+        }
+
+        .badge-local { background: #e3f9e5; color: #1f7a28; }
+        .badge-network { background: #fff4e5; color: #b37700; }
+
+        .feature-list {
+            list-style: none;
+            display: grid;
+            gap: 16px;
+        }
+
+        .feature-item {
+            padding: 16px;
+            background: var(--bg-base);
+            border-radius: var(--radius-md);
+            border: 1px solid var(--border);
+        }
+
+        .feature-item strong {
+            display: block;
+            margin-bottom: 4px;
+            color: var(--primary);
+        }
+
+        /* Specific Alerts */
+        .alert {
+            padding: 24px;
+            border-radius: var(--radius-md);
+            margin-top: 24px;
+        }
+
+        .alert-warning {
+            background: rgba(255, 149, 0, 0.1);
+            border: 1px solid var(--warning);
+            color: var(--warning);
+        }
+
+        .alert-info {
+            background: var(--primary-soft);
+            border: 1px solid var(--primary);
+            color: var(--primary);
         }
 
         /* Footer */
         footer {
             text-align: center;
-            margin-top: 80px;
-            padding-top: 40px;
-            border-top: 1px solid var(--border-color);
-            color: var(--text-secondary);
+            padding: 40px 0;
+            color: var(--text-muted);
             font-size: 14px;
-            font-weight: 500;
         }
 
-        /* Responsive Breakpoints */
+        .contact-btn {
+            display: inline-block;
+            margin-top: 24px;
+            padding: 12px 32px;
+            background: var(--primary);
+            color: white;
+            text-decoration: none;
+            border-radius: 100px;
+            font-weight: 600;
+            transition: opacity 0.2s;
+        }
+
+        @keyframes slideUp {
+            from { opacity: 0; transform: translateY(30px); }
+            to { opacity: 1; transform: translateY(0); }
+        }
+
         @media (max-width: 600px) {
-            .warning-card {
-                flex-direction: column;
-                gap: 16px;
-            }
-            .warning-icon {
-                margin-bottom: 8px;
-            }
-            .number {
-                width: 32px;
-                height: 32px;
-                font-size: 14px;
-                margin-right: 12px;
-            }
-            li::before {
-                top: 8px;
-            }
+            section { padding: 24px; }
+            h1 { font-size: 32px; }
+            .summary-card { grid-template-columns: 1fr; }
         }
     </style>
 </head>
 <body>
 
 <div class="container">
-    <header>
-        <span class="subtitle">Official Privacy Policy</span>
-        <h1>RCKeyBoard</h1>
-        <div class="last-updated">Last Updated: June 9, 2026</div>
+    <header class="hero">
+        <div class="logo-ring">🛡️</div>
+        <h1>Privacy Policy</h1>
+        <p class="tagline">RCKeyBoard Privacy & Data Transparency</p>
+        <p style="margin-top: 12px; font-weight: 600;">Last Updated: July 16, 2026</p>
     </header>
 
-    <div class="intro-text">
-        This Privacy Policy outlines how RCKeyBoard, developed by Omar Shawkey, handles your data. As an Android keyboard, we have access to what you type, which makes your trust our highest priority. We are committed to maintaining strict privacy standards through a Local-First architecture.
+    <div class="summary-card">
+        <div class="summary-item">
+            <div class="summary-icon">🏡</div>
+            <div class="summary-text">
+                <h3>Local-First</h3>
+                <p>99% of your data never leaves your device.</p>
+            </div>
+        </div>
+        <div class="summary-item">
+            <div class="summary-icon">💸</div>
+            <div class="summary-text">
+                <h3>Safe Billing</h3>
+                <p>Google handles all payment details.</p>
+            </div>
+        </div>
+        <div class="summary-item">
+            <div class="summary-icon">🚫</div>
+            <div class="summary-text">
+                <h3>No Logging</h3>
+                <p>We don't track what you type.</p>
+            </div>
+        </div>
     </div>
 
-    <div class="metrics-grid">
-        <div class="metric-card">
-            <div class="metric-title">Typing Data</div>
-            <div class="metric-value">Locally Processed</div>
-        </div>
-        <div class="metric-card">
-            <div class="metric-title">Sensitive Fields</div>
-            <div class="metric-value">Protected Automatically</div>
-        </div>
-        <div class="metric-card">
-            <div class="metric-title">Clipboard History</div>
-            <div class="metric-value">Local Storage (100 Items Max)</div>
-        </div>
-    </div>
-
     <section>
-        <h2><span class="number">1</span>Privacy by Design</h2>
-        <p>RCKeyBoard is engineered to function entirely on your device. We do not collect, track, or sell your keystrokes, typing habits, or personal information. Your regular typing data is never transmitted to our servers or any third-party analytics services.</p>
-    </section>
-
-    <section>
-        <h2><span class="number">2</span>Technical Feature Transparency</h2>
-        <div class="info-card">
-            <ul>
-                <li><strong>Intelligent Learning & Suggestions:</strong> Your personalized dictionary and next-word prediction data are stored securely in a local SQLite/Room database inside the app's sandboxed storage. No cloud synchronization or off-device learning is utilized.</li>
-                <li><strong>Sensitive Input Protection:</strong> The keyboard automatically detects sensitive input fields (e.g., passwords, web passwords, and email addresses). When you type in these fields, all learning, data collection, and context prediction features are completely disabled to help protect user privacy.</li>
-                <li><strong>Local Clipboard Management:</strong> The app caches copied text locally to provide a convenient clipboard history UI. To protect device storage, the local database is strictly capped at 100 items. Older unpinned items are automatically purged as new items are added. All data remains strictly on your device.</li>
-                <li><strong>Theming & Custom Backgrounds:</strong> Custom background images are loaded directly via local Android URIs. No media is ever uploaded to the cloud.</li>
-                <li><strong>Emojis:</strong> All high-quality emoji assets and search rules are bundled directly within the app. No internet connection is used to search for or display emojis.</li>
-            </ul>
+        <span class="badge badge-local">Architecture</span>
+        <h2>1. Sandboxed Security</h2>
+        <p>RCKeyBoard uses a strictly <strong>Local-First architecture</strong>. Your personal dictionary, typing context, and suggestions are stored in a private Room database on your device.</p>
+        <div class="feature-item">
+            <strong>Immutable Privacy</strong>
+            The app is configured with <code>android:allowBackup="false"</code>, ensuring your typing data is never included in system cloud backups.
         </div>
     </section>
 
     <section>
-        <h2><span class="number">3</span>Permissions & Network Usage</h2>
-        <p>We request the absolute minimum permissions required to provide a premium keyboard experience:</p>
-        <ul>
-            <li><strong>Vibrate (VIBRATE):</strong> Required to provide tactile haptic feedback when you press keys.</li>
-            <li><strong>Internet Access (INTERNET, ACCESS_NETWORK_STATE):</strong> These permissions are used exclusively for the optional Inline Translation feature. When you open the translation bar and explicitly request a translation, the text entered into the translation bar may be securely transmitted to external translation services to provide the requested translation. Your regular typing outside of the translation bar is never transmitted.</li>
-            <li><strong>Microphone (Voice Typing):</strong> RCKeyBoard does not request or possess the RECORD_AUDIO permission. When you tap the microphone icon, the app securely delegates the action to your device's built-in system speech-to-text engine (e.g., Google Voice Typing).</li>
-        </ul>
-    </section>
-
-    <section>
-        <h2><span class="number">4</span>Data Sharing</h2>
-        <p>RCKeyBoard does not sell personal information or share typing data with advertisers, analytics providers, or other third parties. Any information processed through optional online features is used solely to provide the functionality explicitly requested by the user.</p>
-
-        <div class="warning-card">
-            <div class="warning-icon">⚠️</div>
-            <div class="warning-content">
-                <h3>The Android Keyboard Warning</h3>
-                <p>When enabling RCKeyBoard, Android displays a standard system warning stating that the keyboard may collect all text you type, including personal data. This is a mandatory warning shown for all third-party keyboards. RCKeyBoard is designed with a privacy-first approach and does not use keyboard access to collect, sell, or share typing data for advertising or profiling purposes.</p>
+        <span class="badge badge-local">Features</span>
+        <h2>2. Technical Transparency</h2>
+        <div class="feature-list">
+            <div class="feature-item">
+                <strong>Clipboard Intelligence</strong>
+                Recent copies are processed locally to show suggestions. We track usage history locally to ensure used items don't reappear, protecting your workflow without cloud tracking.
+            </div>
+            <div class="feature-item">
+                <strong>Sensitive Field Detection</strong>
+                The keyboard automatically detects "Sensitive" fields (passwords, credit cards). In these modes, all learning, suggestions, and logging features are instantly disabled.
+            </div>
+            <div class="feature-item">
+                <strong>Personalized Learning</strong>
+                Words you type are learned locally to improve future suggestions. This data remains in the app's sandboxed storage and is never uploaded.
             </div>
         </div>
     </section>
 
     <section>
-        <h2><span class="number">5</span>Contact & Support</h2>
-        <p>If you have any questions regarding this policy, our data practices, or your privacy, please contact me directly:</p>
-        
-        <div class="contact-info">
-            <div class="contact-item">
-                <strong>Email:</strong> <a href="mailto:omar.mohamed.flutter@gmail.com">omar.mohamed.flutter@gmail.com</a>
+        <span class="badge badge-network">Connectivity</span>
+        <h2>3. Internet Usage Disclosure</h2>
+        <p>We use the <code>INTERNET</code> permission exclusively for the following three user-triggered scenarios:</p>
+        <div class="feature-list">
+            <div class="feature-item">
+                <strong>Theme Store</strong>
+                Used to fetch the current theme catalog and download assets directly from our official GitHub repository.
             </div>
-            <div class="contact-item">
-                <strong>Developer:</strong> Omar Shawkey
+            <div class="feature-item">
+                <strong>Inline Translation</strong>
+                When you explicitly request a translation, the text is sent securely to external translation engines to provide the service.
             </div>
+            <div class="feature-item">
+                <strong>Google Play Billing</strong>
+                Used to verify license status and process secure payments through Google's official systems.
+            </div>
+        </div>
+    </section>
+
+    <section>
+        <span class="badge badge-network">Payments</span>
+        <h2>4. Billing & Refund Policy</h2>
+        <p>All premium transactions are processed by Google Play. RCKeyBoard does not have access to your credit card or billing information.</p>
+        <div class="alert alert-info">
+            <strong>Refund Rights:</strong> Users have the right to request a full refund via Google Play if they are unsatisfied with a digital purchase. Beyond the standard Google Play refund window, digital sales are final once consumed.
+        </div>
+    </section>
+
+    <section>
+        <h2>5. Standard System Warning</h2>
+        <div class="alert alert-warning">
+            <strong>"This input method may be able to collect..."</strong>
+            This is a generic warning shown by Android for every third-party keyboard. RCKeyBoard is designed to prove this warning wrong by maintaining zero-knowledge of your keystrokes on our servers.
         </div>
     </section>
 
     <footer>
-        <p>&copy; 2026 Omar Shawkey. This Privacy Policy reflects the current operational state of the RCKeyBoard application.</p>
+        <p>Developed by Omar Shawkey</p>
+        <a href="mailto:omar.mohamed.flutter@gmail.com" class="contact-btn">Contact Support</a>
+        <p style="margin-top: 32px;">&copy; 2026 RCKeyBoard. All rights reserved.</p>
     </footer>
 </div>
 
