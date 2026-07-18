@@ -25,5 +25,14 @@
     "downloadUrl": "https://raw.githubusercontent.com/OmarShawkey13/keyboard/main/themes/minecraft.zip",
     "isPremium": true,
     "productId": "minecraft_1"
+  },
+  {
+    "id": "cute_cat",
+    "name": "Cute Cat",
+    "author": "Omar Shawkey",
+    "previewUrl": "https://raw.githubusercontent.com/OmarShawkey13/keyboard/main/images/cute_cat.png",
+    "downloadUrl": "https://raw.githubusercontent.com/OmarShawkey13/keyboard/main/themes/cute_cat.zip",
+    "isPremium": true,
+    "productId": "cute_cat_1"
   }
 ]
