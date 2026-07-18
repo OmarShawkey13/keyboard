@@ -34,5 +34,14 @@
     "downloadUrl": "https://raw.githubusercontent.com/OmarShawkey13/keyboard/main/themes/cute_cat.zip",
     "isPremium": true,
     "productId": "cute_cat_1"
+  },
+  {
+    "id": "avocado",
+    "name": "Avocado",
+    "author": "Omar Shawkey",
+    "previewUrl": "https://raw.githubusercontent.com/OmarShawkey13/keyboard/main/images/avocado.png",
+    "downloadUrl": "https://raw.githubusercontent.com/OmarShawkey13/keyboard/main/themes/avocado.zip",
+    "isPremium": true,
+    "productId": "avocado_1"
   }
 ]
