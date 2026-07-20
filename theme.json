@@ -5,8 +5,7 @@
     "author": "Omar Shawkey",
     "previewUrl": "https://raw.githubusercontent.com/OmarShawkey13/keyboard/main/images/Penguin.jpeg",
     "downloadUrl": "https://raw.githubusercontent.com/OmarShawkey13/keyboard/main/themes/Penguin.zip",
-    "isPremium": false,
-    "productId": null
+    "isPremium": false
   },
   {
     "id": "penguin_elite",
@@ -14,8 +13,7 @@
     "author": "Omar Shawkey",
     "previewUrl": "https://raw.githubusercontent.com/OmarShawkey13/keyboard/main/images/penguin_elite.png",
     "downloadUrl": "https://raw.githubusercontent.com/OmarShawkey13/keyboard/main/themes/penguin_elite.zip",
-    "isPremium": true,
-    "productId": "penguin_elite_1"
+    "isPremium": true
   },
   {
     "id": "minecraft",
@@ -23,8 +21,7 @@
     "author": "Omar Shawkey",
     "previewUrl": "https://raw.githubusercontent.com/OmarShawkey13/keyboard/main/images/minecraft.png",
     "downloadUrl": "https://raw.githubusercontent.com/OmarShawkey13/keyboard/main/themes/minecraft.zip",
-    "isPremium": true,
-    "productId": "minecraft_1"
+    "isPremium": true
   },
   {
     "id": "cute_cat",
@@ -32,8 +29,7 @@
     "author": "Omar Shawkey",
     "previewUrl": "https://raw.githubusercontent.com/OmarShawkey13/keyboard/main/images/cute_cat.png",
     "downloadUrl": "https://raw.githubusercontent.com/OmarShawkey13/keyboard/main/themes/cute_cat.zip",
-    "isPremium": true,
-    "productId": "cute_cat_1"
+    "isPremium": true
   },
   {
     "id": "avocado",
@@ -41,7 +37,6 @@
     "author": "Omar Shawkey",
     "previewUrl": "https://raw.githubusercontent.com/OmarShawkey13/keyboard/main/images/avocado.png",
     "downloadUrl": "https://raw.githubusercontent.com/OmarShawkey13/keyboard/main/themes/avocado.zip",
-    "isPremium": true,
-    "productId": "avocado_1"
+    "isPremium": true
   }
 ]
