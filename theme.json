@@ -8,6 +8,14 @@
     "isPremium": true
   },
   {
+    "id": "amoled_dark",
+    "name": "Amoled Dark",
+    "author": "Omar Shawkey",
+    "previewUrl": "https://raw.githubusercontent.com/OmarShawkey13/keyboard/main/images/amoled_dark.jpg",
+    "downloadUrl": "https://raw.githubusercontent.com/OmarShawkey13/keyboard/main/themes/amoled_dark.zip",
+    "isPremium": true
+  },
+  {
     "id": "penguin",
     "name": "Penguin",
     "author": "Omar Shawkey",
