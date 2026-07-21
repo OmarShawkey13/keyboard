@@ -1,5 +1,13 @@
 [
   {
+    "id": "classic_light",
+    "name": "Classic Light",
+    "author": "Omar Shawkey",
+    "previewUrl": "https://raw.githubusercontent.com/OmarShawkey13/keyboard/main/images/classic_light.jpg",
+    "downloadUrl": "https://raw.githubusercontent.com/OmarShawkey13/keyboard/main/themes/classic_light.zip",
+    "isPremium": false
+  },
+  {
     "id": "penguin",
     "name": "Penguin",
     "author": "Omar Shawkey",
