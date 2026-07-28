@@ -1,5 +1,13 @@
 [
   {
+    "id": "butter",
+    "name": "Butter",
+    "author": "Omar Shawkey",
+    "previewUrl": "https://raw.githubusercontent.com/OmarShawkey13/keyboard/main/images/butter.png",
+    "downloadUrl": "https://raw.githubusercontent.com/OmarShawkey13/keyboard/main/themes/butter.zip",
+    "isPremium": true
+  },
+  {
     "id": "break_fast",
     "name": "Break Fast",
     "author": "Omar Shawkey",
