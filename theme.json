@@ -1,5 +1,13 @@
 [
   {
+    "id": "break_fast",
+    "name": "Break Fast",
+    "author": "Omar Shawkey",
+    "previewUrl": "https://raw.githubusercontent.com/OmarShawkey13/keyboard/main/images/break_fast.png",
+    "downloadUrl": "https://raw.githubusercontent.com/OmarShawkey13/keyboard/main/themes/break_fast.zip",
+    "isPremium": true
+  },
+  {
     "id": "pink_check",
     "name": "PinkCheck",
     "author": "Omar Shawkey",
@@ -29,7 +37,7 @@
     "author": "Omar Shawkey",
     "previewUrl": "https://raw.githubusercontent.com/OmarShawkey13/keyboard/main/images/Penguin.jpeg",
     "downloadUrl": "https://raw.githubusercontent.com/OmarShawkey13/keyboard/main/themes/Penguin.zip",
-    "isPremium": false
+    "isPremium": true
   },
   {
     "id": "penguin_elite",
