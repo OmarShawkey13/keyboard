@@ -1,5 +1,21 @@
 [
   {
+    "id": "amongus",
+    "name": "Amongus",
+    "author": "Omar Shawkey",
+    "previewUrl": "https://raw.githubusercontent.com/OmarShawkey13/keyboard/main/images/amongus.png",
+    "downloadUrl": "https://raw.githubusercontent.com/OmarShawkey13/keyboard/main/themes/amongus.zip",
+    "isPremium": true
+  },
+  {
+    "id": "chocolate",
+    "name": "Chocolate",
+    "author": "Omar Shawkey",
+    "previewUrl": "https://raw.githubusercontent.com/OmarShawkey13/keyboard/main/images/chocolate.png",
+    "downloadUrl": "https://raw.githubusercontent.com/OmarShawkey13/keyboard/main/themes/chocolate.zip",
+    "isPremium": true
+  },
+  {
     "id": "butter",
     "name": "Butter",
     "author": "Omar Shawkey",
