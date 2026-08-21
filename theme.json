@@ -1,5 +1,13 @@
 [
   {
+    "id": "dark_theme",
+    "name": "Dark Ios 27",
+    "author": "Omar Shawkey",
+    "previewUrl": "https://raw.githubusercontent.com/OmarShawkey13/keyboard/main/images/dark_theme.png",
+    "downloadUrl": "https://raw.githubusercontent.com/OmarShawkey13/keyboard/main/themes/dark_theme.zip",
+    "isPremium": true
+  },
+  {
     "id": "pink_bear",
     "name": "Pink Bear",
     "author": "Omar Shawkey",
