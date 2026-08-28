@@ -1,5 +1,29 @@
 [
   {
+    "id": "matcha_cream",
+    "name": "Matcha Cream",
+    "author": "Omar Shawkey",
+    "previewUrl": "https://raw.githubusercontent.com/OmarShawkey13/keyboard/main/images/matcha_cream.png",
+    "downloadUrl": "https://raw.githubusercontent.com/OmarShawkey13/keyboard/main/themes/matcha_cream.zip",
+    "isPremium": true
+  },
+  {
+    "id": "lavender_frost",
+    "name": "Lavender Frost",
+    "author": "Omar Shawkey",
+    "previewUrl": "https://raw.githubusercontent.com/OmarShawkey13/keyboard/main/images/lavender_frost.png",
+    "downloadUrl": "https://raw.githubusercontent.com/OmarShawkey13/keyboard/main/themes/lavender_frost.zip",
+    "isPremium": true
+  },
+  {
+    "id": "ice_blue",
+    "name": "Ice Blue",
+    "author": "Omar Shawkey",
+    "previewUrl": "https://raw.githubusercontent.com/OmarShawkey13/keyboard/main/images/ice_blue.png",
+    "downloadUrl": "https://raw.githubusercontent.com/OmarShawkey13/keyboard/main/themes/ice_blue.zip",
+    "isPremium": true
+  },
+  {
     "id": "dark_theme",
     "name": "Dark Ios 27",
     "author": "Omar Shawkey",
