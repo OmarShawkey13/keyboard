@@ -1,5 +1,13 @@
 [
   {
+    "id": "midnight_tokyo",
+    "name": "Midnight Tokyo",
+    "author": "Omar Shawkey",
+    "previewUrl": "https://raw.githubusercontent.com/OmarShawkey13/keyboard/main/images/midnight_tokyo.png",
+    "downloadUrl": "https://raw.githubusercontent.com/OmarShawkey13/keyboard/main/themes/midnight_tokyo.zip",
+    "isPremium": true
+  },
+  {
     "id": "matcha_cream",
     "name": "Matcha Cream",
     "author": "Omar Shawkey",
