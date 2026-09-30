@@ -1,5 +1,13 @@
 [
     {
+        "id": "cloud_drift",
+        "name": "Cloud Drift",
+        "author": "Omar Shawkey",
+        "previewUrl": "https://raw.githubusercontent.com/OmarShawkey13/keyboard/main/images/cloud_drift.png",
+        "downloadUrl": "https://raw.githubusercontent.com/OmarShawkey13/keyboard/main/themes/cloud_drift.zip",
+        "isPremium": true
+    },
+    {
         "id": "pink_paws",
         "name": "Pink Paws",
         "author": "Omar Shawkey",
