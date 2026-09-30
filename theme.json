@@ -1,5 +1,13 @@
 [
     {
+        "id": "rose_glow",
+        "name": "Rose Glow",
+        "author": "Omar Shawkey",
+        "previewUrl": "https://raw.githubusercontent.com/OmarShawkey13/keyboard/main/images/rose_glow.png",
+        "downloadUrl": "https://raw.githubusercontent.com/OmarShawkey13/keyboard/main/themes/rose_glow.zip",
+        "isPremium": true
+    },
+    {
         "id": "cloud_drift",
         "name": "Cloud Drift",
         "author": "Omar Shawkey",
