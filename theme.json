@@ -1,5 +1,21 @@
 [
     {
+        "id": "classic_light_ios_17",
+        "name": "Classic light ios 17",
+        "author": "Omar Shawkey",
+        "previewUrl": "https://raw.githubusercontent.com/OmarShawkey13/keyboard/main/images/classic_light_ios_17.png",
+        "downloadUrl": "https://raw.githubusercontent.com/OmarShawkey13/keyboard/main/themes/classic_light_ios_17.zip",
+        "isPremium": true
+    },
+    {
+        "id": "classic_dark_ios_17",
+        "name": "Classic dark ios 17",
+        "author": "Omar Shawkey",
+        "previewUrl": "https://raw.githubusercontent.com/OmarShawkey13/keyboard/main/images/classic_dark_ios_17.png",
+        "downloadUrl": "https://raw.githubusercontent.com/OmarShawkey13/keyboard/main/themes/classic_dark_ios_17.zip",
+        "isPremium": true
+    },
+    {
         "id": "rose_glow",
         "name": "Rose Glow",
         "author": "Omar Shawkey",
