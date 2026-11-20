@@ -1,354 +1,185 @@
 <!DOCTYPE html>
-<html lang="en">
+<html lang="en" dir="ltr">
 <head>
-    <meta charset="UTF-8">
-    <meta name="viewport" content="width=device-width, initial-scale=1.0">
-    <title>Privacy Policy - RCKeyBoard</title>
-    <style>
-        :root {
-            /* Design System */
-            --bg-base: #f8f9fa;
-            --surface: #ffffff;
-            --primary: #007aff;
-            --primary-soft: rgba(0, 122, 255, 0.08);
-            --text-main: #1d1d1f;
-            --text-muted: #6e6e73;
-            --border: rgba(0, 0, 0, 0.1);
-            --success: #34c759;
-            --warning: #ff9500;
-            --danger: #ff3b30;
-            --radius-lg: 24px;
-            --radius-md: 16px;
-            --shadow: 0 10px 30px rgba(0,0,0,0.05);
-            --font-main: -apple-system, BlinkMacSystemFont, "SF Pro Text", "Helvetica Neue", sans-serif;
-        }
-
-        @media (prefers-color-scheme: dark) {
-            :root {
-                --bg-base: #000000;
-                --surface: #1c1c1e;
-                --primary: #0a84ff;
-                --primary-soft: rgba(10, 132, 255, 0.15);
-                --text-main: #f5f5f7;
-                --text-muted: #86868b;
-                --border: rgba(255, 255, 255, 0.15);
-                --shadow: 0 10px 30px rgba(0,0,0,0.5);
-            }
-        }
-
-        * {
-            box-sizing: border-box;
-            margin: 0;
-            padding: 0;
-        }
-
-        body {
-            font-family: var(--font-main);
-            background-color: var(--bg-base);
-            color: var(--text-main);
-            line-height: 1.6;
-            -webkit-font-smoothing: antialiased;
-        }
-
-        .container {
-            max-width: 900px;
-            margin: 0 auto;
-            padding: 60px 24px;
-        }
-
-        /* Hero */
-        .hero {
-            text-align: center;
-            margin-bottom: 60px;
-            animation: slideUp 0.8s cubic-bezier(0.2, 0.8, 0.2, 1);
-        }
-
-        .logo-ring {
-            width: 80px;
-            height: 80px;
-            background: var(--primary-soft);
-            border-radius: 50%;
-            display: flex;
-            align-items: center;
-            justify-content: center;
-            margin: 0 auto 24px;
-            font-size: 40px;
-        }
-
-        h1 {
-            font-size: 48px;
-            font-weight: 800;
-            letter-spacing: -1.5px;
-            margin-bottom: 8px;
-        }
-
-        .tagline {
-            color: var(--text-muted);
-            font-size: 18px;
-        }
-
-        /* TL;DR Summary Section */
-        .summary-card {
-            background: var(--primary-soft);
-            border-radius: var(--radius-lg);
-            padding: 32px;
-            margin-bottom: 40px;
-            display: grid;
-            grid-template-columns: repeat(auto-fit, minmax(200px, 1fr));
-            gap: 24px;
-            border: 1px solid var(--primary);
-        }
-
-        .summary-item {
-            display: flex;
-            align-items: flex-start;
-            gap: 16px;
-        }
-
-        .summary-icon {
-            font-size: 24px;
-            background: var(--surface);
-            width: 48px;
-            height: 48px;
-            display: flex;
-            align-items: center;
-            justify-content: center;
-            border-radius: 12px;
-            flex-shrink: 0;
-            box-shadow: var(--shadow);
-        }
-
-        .summary-text h3 {
-            font-size: 16px;
-            margin-bottom: 4px;
-        }
-
-        .summary-text p {
-            font-size: 14px;
-            color: var(--text-muted);
-        }
-
-        /* Content Blocks */
-        section {
-            background: var(--surface);
-            border-radius: var(--radius-lg);
-            padding: 40px;
-            margin-bottom: 24px;
-            box-shadow: var(--shadow);
-            border: 1px solid var(--border);
-            transition: transform 0.3s ease;
-        }
-
-        section:hover {
-            transform: translateY(-2px);
-        }
-
-        h2 {
-            font-size: 24px;
-            margin-bottom: 20px;
-            display: flex;
-            align-items: center;
-            gap: 12px;
-        }
-
-        p {
-            margin-bottom: 16px;
-            color: var(--text-muted);
-        }
-
-        .badge {
-            display: inline-block;
-            padding: 4px 12px;
-            border-radius: 100px;
-            font-size: 12px;
-            font-weight: 700;
-            text-transform: uppercase;
-            margin-bottom: 12px;
-        }
-
-        .badge-local { background: #e3f9e5; color: #1f7a28; }
-        .badge-network { background: #fff4e5; color: #b37700; }
-
-        .feature-list {
-            list-style: none;
-            display: grid;
-            gap: 16px;
-        }
-
-        .feature-item {
-            padding: 16px;
-            background: var(--bg-base);
-            border-radius: var(--radius-md);
-            border: 1px solid var(--border);
-        }
-
-        .feature-item strong {
-            display: block;
-            margin-bottom: 4px;
-            color: var(--primary);
-        }
-
-        /* Specific Alerts */
-        .alert {
-            padding: 24px;
-            border-radius: var(--radius-md);
-            margin-top: 24px;
-        }
-
-        .alert-warning {
-            background: rgba(255, 149, 0, 0.1);
-            border: 1px solid var(--warning);
-            color: var(--warning);
-        }
-
-        .alert-info {
-            background: var(--primary-soft);
-            border: 1px solid var(--primary);
-            color: var(--primary);
-        }
-
-        /* Footer */
-        footer {
-            text-align: center;
-            padding: 40px 0;
-            color: var(--text-muted);
-            font-size: 14px;
-        }
-
-        .contact-btn {
-            display: inline-block;
-            margin-top: 24px;
-            padding: 12px 32px;
-            background: var(--primary);
-            color: white;
-            text-decoration: none;
-            border-radius: 100px;
-            font-weight: 600;
-            transition: opacity 0.2s;
-        }
-
-        @keyframes slideUp {
-            from { opacity: 0; transform: translateY(30px); }
-            to { opacity: 1; transform: translateY(0); }
-        }
-
-        @media (max-width: 600px) {
-            section { padding: 24px; }
-            h1 { font-size: 32px; }
-            .summary-card { grid-template-columns: 1fr; }
-        }
-    </style>
+<meta charset="UTF-8">
+<meta name="viewport" content="width=device-width,initial-scale=1">
+<meta name="description" content="RCKeyboard Privacy Policy — learn how RCKeyboard handles typing, clipboard, translations, themes, stickers, advertising and subscriptions.">
+<meta name="color-scheme" content="light dark">
+<title>Privacy Policy · RCKeyboard</title>
+<style>
+:root{color-scheme:light dark;--page:#f5f6f8;--surface:#fff;--text:#1d1d1f;--muted:#6e6e73;--line:#e5e7ec;--accent:#1466d4;--soft:#eaf2ff;--chip:#f1f4f8;--shadow:0 10px 30px rgba(15,33,58,.035);--focus:#2563eb}
+*{box-sizing:border-box}html{scroll-behavior:smooth;scroll-padding-top:26px}body{margin:0;background:var(--page);font-family:system-ui,-apple-system,BlinkMacSystemFont,"Segoe UI",Tahoma,Arial,sans-serif;color:var(--text);line-height:1.8;-webkit-font-smoothing:antialiased}a{color:var(--accent);text-underline-offset:3px}a:hover{text-decoration-thickness:2px}a:focus-visible,button:focus-visible{outline:3px solid var(--focus);outline-offset:3px;border-radius:7px}.layout{max-width:1140px;margin:0 auto;padding:30px 28px 58px}.topline{display:flex;align-items:center;justify-content:space-between;gap:15px;flex-wrap:wrap}.brand{display:flex;align-items:center;gap:12px;font-weight:800;letter-spacing:-.025em}.logo{width:40px;height:40px;display:grid;place-items:center;border:1px solid var(--line);background:var(--surface);border-radius:12px;color:var(--accent);font-weight:900;font-size:18px}.language-switch{display:flex;gap:3px;background:var(--surface);padding:4px;border:1px solid var(--line);border-radius:999px}.language-switch button{border:0;border-radius:999px;min-width:85px;padding:8px 13px;font:inherit;font-size:13px;font-weight:600;cursor:pointer;background:transparent;color:var(--muted)}.language-switch button[aria-pressed=true]{background:var(--text);color:var(--surface)}.hero{margin:57px 0 26px}.eyebrow{font-weight:800;text-transform:uppercase;letter-spacing:.14em;color:var(--accent);font-size:11px}.hero h1{margin:12px 0;font-size:clamp(35px,5.2vw,61px);line-height:1.13;letter-spacing:-.055em}.hero p{color:var(--muted);font-size:16px;max-width:750px;margin:0}.meta{display:flex;gap:10px;flex-wrap:wrap;margin-top:22px}.pill{display:inline-flex;align-items:center;gap:7px;padding:7px 12px;background:var(--surface);border:1px solid var(--line);border-radius:999px;font-size:12px;color:var(--muted)}.highlights{display:grid;grid-template-columns:repeat(3,minmax(0,1fr));gap:12px;margin:26px 0 33px}.highlight{background:var(--surface);border:1px solid var(--line);border-radius:16px;padding:18px;box-shadow:var(--shadow)}.highlight strong{display:block;font-size:15px;line-height:1.4;margin-bottom:5px}.highlight span{display:block;font-size:13px;color:var(--muted)}.highlight .mark{font-size:18px;margin-bottom:11px}.content-grid{display:grid;grid-template-columns:237px minmax(0,1fr);gap:24px;align-items:start}.toc{position:sticky;top:20px;max-height:calc(100vh - 40px);overflow:auto;background:var(--surface);padding:17px 12px;border:1px solid var(--line);border-radius:18px}.toc-title{font-size:11px;text-transform:uppercase;letter-spacing:.1em;color:var(--muted);font-weight:800;padding:0 10px 9px}.toc a{display:block;padding:8px 10px;border-radius:8px;color:var(--muted);font-size:12px;text-decoration:none;line-height:1.55}.toc a:hover,.toc a:focus-visible{background:var(--soft);color:var(--accent)}.policy-content{min-width:0;display:grid;grid-template-columns:minmax(0,1fr);gap:14px}.policy-section{min-width:0;padding:27px 31px 30px;background:var(--surface);border:1px solid var(--line);border-radius:19px;box-shadow:var(--shadow);scroll-margin-top:18px}.section-kicker{font-size:11px;letter-spacing:.12em;color:var(--accent);font-weight:800}.policy-section h2{font-size:23px;line-height:1.35;letter-spacing:-.025em;margin:9px 0 16px}.policy-section p{font-size:14px;margin:0 0 13px;color:var(--muted);overflow-wrap:anywhere}.policy-section p:last-child{margin-bottom:0}.policy-section strong{color:var(--text)}.policy-section ul{margin:0;padding-inline-start:21px;color:var(--muted);font-size:14px}.policy-section li{margin:0 0 11px;padding-inline-start:3px}.policy-section li strong{color:var(--text)}code{font-size:12px;background:var(--chip);border:1px solid var(--line);padding:2px 5px;border-radius:5px;white-space:nowrap}.table-wrap{min-width:0;max-width:100%;overflow-x:auto;margin:9px 0 18px;border:1px solid var(--line);border-radius:10px}table{width:100%;border-collapse:collapse;min-width:650px;text-align:start}th,td{padding:13px 12px;border-bottom:1px solid var(--line);text-align:start;vertical-align:top;font-size:12px;line-height:1.65}th{background:var(--chip);color:var(--text);font-weight:800}td{color:var(--muted)}td:first-child{font-weight:700;color:var(--text);min-width:145px}tr:last-child td{border-bottom:none}[dir=rtl] .hero h1{letter-spacing:normal}[dir=rtl] .policy-section h2{letter-spacing:normal}[dir=rtl] .hero p{max-width:850px}.footer{margin:32px 0 0;border-top:1px solid var(--line);padding-top:20px;display:flex;justify-content:space-between;flex-wrap:wrap;gap:12px;color:var(--muted);font-size:12px}[hidden]{display:none!important}
+@media(prefers-color-scheme:dark){:root{--page:#0b0d10;--surface:#15181d;--text:#f1f4f8;--muted:#adb5bf;--line:#2b3037;--accent:#7aafff;--soft:#1c3049;--chip:#20252c;--shadow:0 15px 42px rgba(0,0,0,.12);--focus:#93c5fd}.language-switch button[aria-pressed=true]{background:#e8edf5;color:#181a20}}
+@media(max-width:830px){.toc{position:static;display:flex;flex-wrap:nowrap;overflow:auto;white-space:nowrap;max-height:none;gap:3px}.toc-title{display:none}.toc a{flex-shrink:0}.content-grid{display:flex;flex-direction:column}.toc,.policy-content{width:100%}.highlights{grid-template-columns:1fr}.highlight{padding:15px}.hero{margin-top:37px}.policy-section{padding:22px}}
+@media(max-width:450px){.layout{padding:18px 15px 30px}.brand{font-size:15px}.language-switch button{min-width:67px}.hero h1{font-size:37px}.policy-section h2{font-size:21px}}
+@media print{body{background:#fff;color:#000}.layout{max-width:none;padding:0}.language-switch,.toc{display:none!important}.content-grid{display:block}.policy-section{break-inside:avoid;border:0;border-bottom:1px solid #ddd;box-shadow:none;border-radius:0}.highlights{break-inside:avoid}}
+</style>
 </head>
 <body>
-
-<div class="container">
-    <header class="hero">
-        <div class="logo-ring">🛡️</div>
-        <h1>Privacy Policy</h1>
-        <p class="tagline">RCKeyBoard Privacy & Data Transparency</p>
-        <p style="margin-top: 12px; font-weight: 600;">Last Updated: August 2, 2026</p>
-    </header>
-
-    <div class="summary-card">
-        <div class="summary-item">
-            <div class="summary-icon">🏡</div>
-            <div class="summary-text">
-                <h3>Local-First</h3>
-                <p>99% of your data never leaves your device.</p>
-            </div>
-        </div>
-        <div class="summary-item">
-            <div class="summary-icon">💸</div>
-            <div class="summary-text">
-                <h3>Safe Billing</h3>
-                <p>Google handles all payment details.</p>
-            </div>
-        </div>
-        <div class="summary-item">
-            <div class="summary-icon">🚫</div>
-            <div class="summary-text">
-                <h3>No Logging</h3>
-                <p>We don't track what you type.</p>
-            </div>
-        </div>
-    </div>
-
-    <section>
-        <span class="badge badge-local">Architecture</span>
-        <h2>1. Sandboxed Security</h2>
-        <p>RCKeyBoard uses a strictly <strong>Local-First architecture</strong>. Your personal dictionary, typing context, and suggestions are stored in a private Room database on your device.</p>
-        <div class="feature-item">
-            <strong>Immutable Privacy</strong>
-            The app is configured with <code>android:allowBackup="false"</code>, ensuring your typing data is never included in system cloud backups.
-        </div>
-    </section>
-
-    <section>
-        <span class="badge badge-local">Features</span>
-        <h2>2. Technical Transparency</h2>
-        <div class="feature-list">
-            <div class="feature-item">
-                <strong>Clipboard Intelligence</strong>
-                Recent copies are processed locally to show suggestions. We track usage history locally to ensure used items don't reappear, protecting your workflow without cloud tracking.
-            </div>
-            <div class="feature-item">
-                <strong>Sensitive Field Detection</strong>
-                The keyboard automatically detects "Sensitive" fields (passwords, credit cards). In these modes, all learning, suggestions, and logging features are instantly disabled.
-            </div>
-            <div class="feature-item">
-                <strong>Personalized Learning</strong>
-                Words you type are learned locally to improve future suggestions. This data remains in the app's sandboxed storage and is never uploaded.
-            </div>
-        </div>
-    </section>
-
-    <section>
-        <span class="badge badge-network">Connectivity</span>
-        <h2>3. Internet Usage Disclosure</h2>
-        <p>We use the <code>INTERNET</code> permission exclusively for the following user-triggered scenarios:</p>
-        <div class="feature-list">
-            <div class="feature-item">
-                <strong>Theme Store</strong>
-                Used to fetch the current theme catalog and download assets directly from our official GitHub repository.
-            </div>
-            <div class="feature-item">
-                <strong>Emoji Pack Downloads</strong>
-                Used to download optional emoji font packs from our GitHub repository. Third-party servers (GitHub) may collect technical logs such as your IP address to facilitate the download process. No keystrokes or personal data are transmitted.
-            </div>
-            <div class="feature-item">
-                <strong>Inline Translation</strong>
-                When you explicitly request a translation, the text is sent securely to external translation engines to provide the service.
-            </div>
-            <div class="feature-item">
-                <strong>Google Play Billing</strong>
-                Used to verify license status and process secure payments through Google's official systems.
-            </div>
-        </div>
-    </section>
-
-    <section>
-        <span class="badge badge-network">Payments</span>
-        <h2>4. Billing & Refund Policy</h2>
-        <p>All premium transactions are processed by Google Play. RCKeyBoard does not have access to your credit card or billing information.</p>
-        <div class="alert alert-info">
-            <strong>Refund Rights:</strong> Users have the right to request a full refund via Google Play if they are unsatisfied with a digital purchase. Beyond the standard Google Play refund window, digital sales are final once consumed.
-        </div>
-    </section>
-
-    <section>
-        <h2>5. Standard System Warning</h2>
-        <div class="alert alert-warning">
-            <strong>"This input method may be able to collect..."</strong>
-            This is a generic warning shown by Android for every third-party keyboard. RCKeyBoard is designed to prove this warning wrong by maintaining zero-knowledge of your keystrokes on our servers.
-        </div>
-    </section>
-
-    <footer>
-        <p>Developed by Omar Shawkey</p>
-        <a href="mailto:omar.mohamed.flutter@gmail.com" class="contact-btn">Contact Support</a>
-        <p style="margin-top: 32px;">&copy; 2026 RCKeyBoard. All rights reserved.</p>
-    </footer>
+<div class="layout">
+<div class="topline"><div class="brand"><div class="logo" aria-hidden="true">RC</div><span>RCKeyboard <span style="font-weight:400;color:var(--muted)">/ Privacy</span></span></div><div class="language-switch" role="group" aria-label="Policy language"><button id="btn-en" type="button" aria-pressed="true">English</button><button id="btn-ar" type="button" aria-pressed="false">العربية</button></div></div>
+<header class="hero"><div class="eyebrow">Privacy · Trust · Transparency</div><h1 id="hero-title">Privacy Policy</h1><p id="hero-subtitle">How RCKeyboard handles your typing data, device content, online translation, ads, subscriptions and other connected services.</p><div class="meta"><span class="pill" id="updated-pill">Updated November 20, 2026</span><span class="pill">RCKeyboard 5.2.0</span><span class="pill">Android · rc.keyboard</span></div></header>
+<div class="highlights"><div class="highlight"><div class="mark">⌨️</div><strong id="h1-title">Local-first keyboard</strong><span id="h1-copy">Everyday typing and personalization are handled primarily on your device.</span></div><div class="highlight"><div class="mark">🌐</div><strong id="h2-title">Optional online services</strong><span id="h2-copy">Translation and downloads connect to external providers.</span></div><div class="highlight"><div class="mark">🎨</div><strong id="h3-title">Ads unlock themes</strong><span id="h3-copy">Watching an ad opens theme access, not a cash reward. AdMob may process device data.</span></div></div>
+<div class="language-panel" id="panel-en" lang="en" dir="ltr" ><div class="content-grid"><nav class="toc" aria-label="Table of contents"><div class="toc-title">Contents</div><a href="#en-overview">Overview &amp; scope</a><a href="#en-categories">Types of information &amp; their use</a><a href="#en-typing">Typing, learning &amp; sensitive fields</a><a href="#en-clipboard">Clipboard history &amp; text shortcuts</a><a href="#en-media">Sticker Studio, images, fonts &amp; customization</a><a href="#en-downloads">Theme, emoji &amp; language-pack downloads</a><a href="#en-translation">Online translation — important disclosure</a><a href="#en-ads">Ads used to unlock themes — not cash rewards</a><a href="#en-premium">Premium subscriptions &amp; Google Play Billing</a><a href="#en-system">Android spell checker, microphone &amp; other apps</a><a href="#en-sharing">External recipients &amp; purposes</a><a href="#en-retention">Storage, retention &amp; security</a><a href="#en-controls">Your choices, access &amp; deletion requests</a><a href="#en-children">Children &amp; sensitive information</a><a href="#en-changes">Changes to this policy</a><a href="#en-contact">Developer &amp; contact</a></nav><main class="policy-content"><section id="en-overview" class="policy-section"><div class="section-kicker">01 / 16</div><h2>Overview & scope</h2>
+<p>This Privacy Policy explains how <strong>RCKeyboard</strong> (package name <code>rc.keyboard</code>), developed by <strong>Omar Shawkey</strong>, handles information when you use the Android keyboard, its settings, customization features, online services, and integrated third-party tools.</p>
+<p>RCKeyboard is designed to process ordinary keyboard input on your device. <strong>However, the app is not completely offline:</strong> online translation, optional content downloads, ads used to unlock themes, subscriptions, and some Android or Google services may transfer information outside your device. The sections below explain these cases.</p>
+<p>The reviewed app version is <strong>5.2.0 (version code 20261120)</strong>. Features and third-party data practices may change with future releases; this policy will be revised accordingly.</p>
+</section><section id="en-categories" class="policy-section"><div class="section-kicker">02 / 16</div><h2>Types of information & their use</h2>
+<div class="table-wrap"><table><thead><tr><th>Information</th><th>When used</th><th>Handling and purpose</th></tr></thead><tbody>
+<tr><td>Keyboard input, learned words, suggestions and dictionary</td><td>During typing and personalization</td><td>Processed primarily on-device for text entry, prediction and correction; learned data and preferences can be saved locally.</td></tr>
+<tr><td>Clipboard text and history</td><td>When clipboard history is enabled/used</td><td>Accessed subject to Android restrictions and sensitivity handling; saved in local encrypted storage for clipboard functions.</td></tr>
+<tr><td>Selected images, sticker drafts, fonts and theme files</td><td>When you import, edit, share or export content</td><td>Accessed and processed for your chosen customization or sticker action; copies and project files may be kept on-device.</td></tr>
+<tr><td>Translation text (which may contain an email address or other personal data)</td><td>Only when you request online translation</td><td>Sent to a translation provider to produce a translation. This may include personal data that you enter in the text itself.</td></tr>
+<tr><td>Device/network identifiers, approximate region from IP, app interactions and diagnostics</td><td>Through ad delivery and online services</td><td>May be collected by third-party providers for ad delivery, measurement, fraud prevention, security, diagnostics and connectivity.</td></tr>
+<tr><td>Subscription and entitlement status</td><td>When you browse, purchase, restore or check Premium</td><td>Exchanged with Google Play Billing to manage access. Card details are processed by Google Play, not entered into RCKeyboard.</td></tr>
+<tr><td>Support email and message</td><td>Only if you contact us</td><td>Used to respond to your request and to investigate issues you voluntarily report.</td></tr>
+</tbody></table></div>
+<p>Depending on the content you deliberately submit for translation or support, the information may include names, email addresses, phone numbers, URLs or other sensitive details. Please do not submit confidential information unless it is necessary for your request.</p>
+</section><section id="en-typing" class="policy-section"><div class="section-kicker">03 / 16</div><h2>Typing, learning & sensitive fields</h2>
+<p>Ordinary typing, keyboard layouts, multilingual input, emoji search, word prediction, autocorrection, text shortcuts, themes, preferences and personalized dictionaries operate primarily on your device. The app can save learned words and suggestion context locally to improve typing.</p>
+<p>RCKeyboard includes protections intended to limit learning and suggestions in password and other sensitive fields, and can respect an app's request not to use personalized learning. An incognito/private keyboard mode, where available, limits local learning. These protections depend in part on the field information supplied by Android and the app you are typing into.</p>
+<p><strong>We do not run an RCKeyboard service that routinely uploads your complete keystroke history for profiling or advertising.</strong> This does not mean every keyboard-related interaction is local: explicitly requested translation and the device's optional spell-check service are discussed separately.</p>
+</section><section id="en-clipboard" class="policy-section"><div class="section-kicker">04 / 16</div><h2>Clipboard history & text shortcuts</h2>
+<p>When the keyboard is active and clipboard features are in use, RCKeyboard can read eligible clipboard text and maintain a history within its local database. Its implementation avoids automatic reading of clips that Android identifies as sensitive, and avoids clipboard synchronization in certain sensitive or private keyboard contexts.</p>
+<p>Clipboard entries are encrypted before local storage. You can manage and delete entries, pin items, and use available clipboard-retention options. Where the optional automatic expiry setting is enabled, unpinned clipboard items are scheduled for removal after approximately one hour; pinned items are not subject to that automatic expiry. When the option is disabled, entries can remain until deleted or app data is cleared.</p>
+<p>User-created text shortcuts and their expanded text are stored locally. <strong>Clipboard and shortcut content is not sent to RCKeyboard's developer servers as part of these features.</strong> Pasting or sharing content into another app is controlled by the destination app and its privacy terms.</p>
+</section><section id="en-media" class="policy-section"><div class="section-kicker">05 / 16</div><h2>Sticker Studio, images, fonts & customization</h2>
+<p>You can choose images for custom keyboard backgrounds, custom key art and icons, or Sticker Studio. You can also select fonts, emoji packs, ZIP themes and other supported files for import, customization and export. RCKeyboard may copy selected items into private app storage and store edited stickers, draft projects or settings locally.</p>
+<p>Sticker Studio uses <strong>Google ML Kit subject segmentation</strong> for background removal. The image-segmentation operation in the reviewed app code is performed on-device; related ML Kit/Google components may manage model delivery and associated technical requests. RCKeyboard does not include a developer-operated photo-upload endpoint for Sticker Studio in the reviewed code.</p>
+<p>When you deliberately insert a sticker into a chat, share a file, or choose a cloud-connected document picker or save location, the receiving app or storage service may receive the selected content. Their terms and privacy practices apply. The app does not need access to your entire photo library merely because it opens the Android photo picker.</p>
+</section><section id="en-downloads" class="policy-section"><div class="section-kicker">06 / 16</div><h2>Theme, emoji & language-pack downloads</h2>
+<p>RCKeyboard connects to remote content hosts, including <strong>GitHub-hosted resources</strong>, to retrieve the theme catalog, previews, chosen themes, emoji-font packs and language/suggestion resources. Some content may also be imported from files you select yourself.</p>
+<p>During these requests, the hosting provider can receive ordinary network information such as IP address, request times, and technical HTTP information and may retain server logs according to its policies. These downloads are intended to retrieve content, not to upload your routine typing history.</p>
+</section><section id="en-translation" class="policy-section"><div class="section-kicker">07 / 16</div><h2>Online translation — important disclosure</h2>
+<p><strong>Translation is optional and user-initiated.</strong> If you enter text in RCKeyboard's translation interface and request translation, the app transmits that text and the chosen language parameters to an external translation endpoint. The reviewed implementation tries <strong>Google translation endpoints</strong> and, for eligible shorter text if those fail, <strong>MyMemory</strong>.</p>
+<p><strong>The transmitted text may include an email address, a name, phone number, message content or other personal/sensitive information if you type or paste it into the translation box.</strong> We do not need to read your Google account email for this to occur. Do not submit passwords, financial details or confidential messages to online translation.</p>
+<p>Translation requests use HTTPS connections in the reviewed code. The translation provider may independently process or retain the request, IP address and related technical data under its own policies. RCKeyboard does not control those external providers' retention periods. Ordinary keyboard typing is not automatically sent to translation endpoints.</p>
+</section><section id="en-ads" class="policy-section"><div class="section-kicker">08 / 16</div><h2>Ads used to unlock themes — not cash rewards</h2>
+<p>Some themes can be unlocked by <strong>choosing to watch advertisements</strong>. This grants temporary access to the selected theme; it does <strong>not</strong> pay users money, points or transferable prizes. The current implementation requires two completed ad views and provides a time-limited theme unlock of three days. Premium subscribers may have different access as indicated inside the app.</p>
+<p>RCKeyboard uses the <strong>Google Mobile Ads (AdMob) SDK</strong>. The SDK can preload ads when you open the theme store, <strong>before you decide whether to watch one</strong>. Google states that its ads SDK automatically collects or shares data such as IP address (which can indicate approximate region), app interactions (including ad views), diagnostic information, and device/account identifiers (which may include the Android advertising ID where available) for advertising, analytics and fraud prevention.</p>
+<p>Those data practices are carried out by Google's SDK and are governed by relevant Google policies and ad settings. We do not claim that no data is transmitted merely because the ad is optional. You can choose not to watch ads, but then ad-locked themes may remain unavailable unless another valid access method applies.</p>
+</section><section id="en-premium" class="policy-section"><div class="section-kicker">09 / 16</div><h2>Premium subscriptions & Google Play Billing</h2>
+<p>Paid features and subscription entitlements are managed through <strong>Google Play Billing</strong>. The app checks purchase/subscription status, product identifiers and entitlement information to grant, restore or revoke access. Billing transactions and payment details are handled by Google Play; RCKeyboard does not request your card number or CVV.</p>
+<p>Google may process account and transaction information under its own privacy and payment terms. Subscription prices, renewals, cancellations and refund eligibility follow the information displayed at purchase and the applicable Google Play terms. This policy does not promise refunds beyond those terms or applicable law.</p>
+</section><section id="en-system" class="policy-section"><div class="section-kicker">10 / 16</div><h2>Android spell checker, microphone & other apps</h2>
+<p><strong>Spell checking:</strong> when RCKeyboard's own dictionary has no confident suggestion, the app may send the relevant word to the spell-check provider configured on your device through Android's spell-check service. Depending on that provider, its processing may be local or online; consult that provider's privacy policy.</p>
+<p><strong>Microphone button:</strong> the button switches to a voice-input method installed on the device or opens Android's input-method chooser. RCKeyboard's reviewed code does not itself record microphone audio for speech recognition. Any voice service you choose is subject to its own permissions and privacy practices.</p>
+<p><strong>Sharing and opening links:</strong> when you send text, stickers or exports to another app, select a cloud location, open Google Play, or compose an email in your mail application, that external app/service handles the information under its policies.</p>
+</section><section id="en-sharing" class="policy-section"><div class="section-kicker">11 / 16</div><h2>External recipients & purposes</h2>
+<p>Relevant third-party services used by the app include:</p><ul>
+<li><strong>Google Mobile Ads / AdMob:</strong> ad loading, display and measurement; advertising/analytics/fraud-prevention data.</li>
+<li><strong>Google Play Billing and In-App Updates:</strong> subscriptions, entitlements and app updates.</li>
+<li><strong>Google translation endpoints and MyMemory:</strong> processing text you explicitly submit for translation.</li>
+<li><strong>GitHub and related download hosts:</strong> serving theme, emoji and language resources and maintaining ordinary network logs.</li>
+<li><strong>Google ML Kit and Android/Google Play services:</strong> on-device image segmentation, model distribution or platform functions, as applicable.</li>
+<li><strong>Android-selected speech, spell-check, mail, file and sharing providers:</strong> only when such features are invoked, subject to each provider's implementation.</li></ul>
+<p>We do not operate a business selling your typed messages or local clipboard history. Third-party advertising and service providers may process data under their own terms; their disclosures must be considered separately from the developer's direct access to data.</p>
+</section><section id="en-retention" class="policy-section"><div class="section-kicker">12 / 16</div><h2>Storage, retention & security</h2>
+<p>Local personalization data, dictionaries, shortcuts, themes, stickers, downloaded files and settings may remain on your device until you delete them, replace them, reset app storage or uninstall the application. Certain local databases and clipboard entries use encryption; the reviewed source includes database encryption support. We cannot guarantee that every file, export, backup or external destination is encrypted in the same way.</p>
+<p>Optional clipboard expiration may remove qualifying unpinned entries after approximately one hour. The temporary access to an ad-unlocked theme currently expires after three days; this is an access timer, not a rule for deletion of every related advertising record.</p>
+<p>Remote providers may apply their own logging, retention, security and deletion schedules. We cannot guarantee the deletion of data they control merely because RCKeyboard is uninstalled. We use HTTPS for the translation and download endpoints examined in the source; no internet transmission or storage technology can be guaranteed absolutely secure.</p>
+</section><section id="en-controls" class="policy-section"><div class="section-kicker">13 / 16</div><h2>Your choices, access & deletion requests</h2>
+<ul>
+<li>Use the keyboard without invoking online translation, optional downloads, or ad-based theme unlocking where those features are not needed.</li>
+<li>Manage learned words, personal dictionaries, shortcuts, clipboard entries, stickers and customization in the app's available settings; clear individual items where supported.</li>
+<li>Control advertising identifiers and available ad-privacy choices in Android/Google settings; your options may depend on your region and device.</li>
+<li>Delete local app data through Android Settings or uninstall RCKeyboard. Files you explicitly exported, messages you sent, and data held by third parties may require separate removal.</li>
+<li>For questions or a request involving information under the developer's control, contact <a href="mailto:omar.mohamed.flutter@gmail.com?subject=RCKeyboard%20Privacy%20Request">omar.mohamed.flutter@gmail.com</a>. Please explain your request without including passwords or sensitive text. We will assess requests under applicable law, but cannot directly delete records held independently by Google, GitHub, translation providers or apps to which you shared content.</li>
+</ul>
+</section><section id="en-children" class="policy-section"><div class="section-kicker">14 / 16</div><h2>Children & sensitive information</h2>
+<p>RCKeyboard is a general-purpose text input tool, not a service built specifically for children. If you supervise a minor's device, review Android/Google settings and consider disabling online translation, ad-related features or other third-party services as appropriate. Do not submit children's personal details, passwords, payment credentials, medical information or other confidential content to optional translation services.</p>
+</section><section id="en-changes" class="policy-section"><div class="section-kicker">15 / 16</div><h2>Changes to this policy</h2>
+<p>We may revise this policy if the application, integrated SDKs, third-party services or legal requirements change. Material changes will be reflected on this page with an updated revision date. The Google Play Data safety declaration is maintained separately and must reflect applicable data collection and sharing across released versions of the app.</p>
+</section><section id="en-contact" class="policy-section"><div class="section-kicker">16 / 16</div><h2>Developer & contact</h2>
+<p><strong>Application:</strong> RCKeyboard for Android (<code>rc.keyboard</code>)</p>
+<p><strong>Developer:</strong> Omar Shawkey</p>
+<p><strong>Privacy contact:</strong> <a href="mailto:omar.mohamed.flutter@gmail.com">omar.mohamed.flutter@gmail.com</a></p>
+<p><strong>Relevant provider information:</strong> <a target="_blank" rel="noopener noreferrer" href="https://policies.google.com/privacy">Google Privacy Policy</a> · <a target="_blank" rel="noopener noreferrer" href="https://policies.google.com/technologies/ads">Google advertising technologies</a> · <a target="_blank" rel="noopener noreferrer" href="https://docs.github.com/en/site-policy/privacy-policies/github-general-privacy-statement">GitHub Privacy Statement</a> · <a target="_blank" rel="noopener noreferrer" href="https://mymemory.translated.net/">MyMemory</a>.</p>
+</section></main></div></div><div class="language-panel" id="panel-ar" lang="ar" dir="rtl" hidden><div class="content-grid"><nav class="toc" aria-label="Table of contents"><div class="toc-title">المحتويات</div><a href="#ar-overview">نطاق السياسة ونظرة عامة</a><a href="#ar-categories">أنواع المعلومات وأغراض استخدامها</a><a href="#ar-typing">الكتابة والتعلّم والحقول الحساسة</a><a href="#ar-clipboard">سجل الحافظة والاختصارات النصية</a><a href="#ar-media">استوديو الملصقات والصور والخطوط والتخصيص</a><a href="#ar-downloads">تنزيل الثيمات والإيموجي وحزم اللغات</a><a href="#ar-translation">الترجمة عبر الإنترنت — إفصاح مهم</a><a href="#ar-ads">الإعلانات لفتح الثيمات — دون مكافآت مالية</a><a href="#ar-premium">اشتراكات Premium والفوترة عبر Google Play</a><a href="#ar-system">مدقق إملاء Android والميكروفون والتطبيقات الأخرى</a><a href="#ar-sharing">الجهات الخارجية وأغراض مشاركة البيانات</a><a href="#ar-retention">التخزين والاحتفاظ والأمان</a><a href="#ar-controls">خياراتك وطلبات الوصول والحذف</a><a href="#ar-children">الأطفال والمعلومات الحساسة</a><a href="#ar-changes">تعديلات هذه السياسة</a><a href="#ar-contact">المطوّر ووسيلة التواصل</a></nav><main class="policy-content"><section id="ar-overview" class="policy-section"><div class="section-kicker">01 / 16</div><h2>نطاق السياسة ونظرة عامة</h2>
+<p>توضح هذه السياسة كيفية تعامل تطبيق <strong>RCKeyboard</strong> (اسم الحزمة <code>rc.keyboard</code>)، الذي يطوره <strong>Omar Shawkey</strong>، مع المعلومات أثناء استخدام لوحة المفاتيح وخصائص التخصيص والخدمات المتصلة بالإنترنت والأدوات الخارجية.</p>
+<p>يعالج التطبيق الكتابة المعتادة على الجهاز أساسًا، <strong>لكنه ليس تطبيقًا يعمل دون إنترنت بالكامل</strong>؛ فقد ترسل الترجمة الاختيارية وتنزيلات المحتوى وإعلانات فتح الثيمات والاشتراكات وبعض خدمات Android أو Google معلومات خارج الجهاز. وتوضح الأقسام التالية هذه الحالات.</p>
+<p>الإصدار الذي استندت إليه هذه السياسة هو <strong>5.2.0 (رمز الإصدار 20261120)</strong>. قد تتغير الوظائف وممارسات الأطراف الخارجية مع الإصدارات المستقبلية، وعندها تُحدّث هذه السياسة.</p>
+</section><section id="ar-categories" class="policy-section"><div class="section-kicker">02 / 16</div><h2>أنواع المعلومات وأغراض استخدامها</h2>
+<div class="table-wrap"><table><thead><tr><th>المعلومات</th><th>وقت استخدامها</th><th>طريقة التعامل والغرض</th></tr></thead><tbody>
+<tr><td>النص المكتوب والكلمات المتعلّمة والاقتراحات والقاموس</td><td>خلال الكتابة والتخصيص</td><td>تُعالج أساسًا على الجهاز لإدخال النص والتنبؤ والتصحيح، وقد تُحفظ الكلمات والإعدادات محليًا.</td></tr>
+<tr><td>نصوص وسجل الحافظة</td><td>عند استخدام سجل الحافظة</td><td>يُطلع عليها وفق قيود Android وضوابط العناصر الحساسة، وتُحفظ في تخزين محلي مشفّر.</td></tr>
+<tr><td>الصور والملصقات والخطوط وملفات الثيم التي تختارها</td><td>عند الاستيراد أو التعديل أو المشاركة أو التصدير</td><td>تُستخدم لتنفيذ التخصيص المطلوب، وقد تُحفظ نسخ منها ومشاريعها على الجهاز.</td></tr>
+<tr><td>نصوص الترجمة التي قد تتضمن بريدًا إلكترونيًا أو بيانات شخصية</td><td>عند طلب الترجمة عبر الإنترنت فقط</td><td>تُرسل إلى مزود الترجمة لإرجاع النتيجة؛ ويمكن أن تتضمن البيانات الشخصية الموجودة في النص الذي تُدخله.</td></tr>
+<tr><td>معرفات الجهاز والشبكة والمنطقة التقريبية المستنتجة من IP والتفاعلات والتشخيصات</td><td>عبر الإعلانات والخدمات المتصلة</td><td>قد تجمعها الجهات الخارجية لتقديم الإعلانات وقياسها ومنع الاحتيال وتشخيص الأخطاء وتأمين الاتصال.</td></tr>
+<tr><td>حالة الاشتراك واستحقاق الميزات المدفوعة</td><td>عند عرض Premium أو الشراء أو الاستعادة أو التحقق</td><td>يتم التبادل مع Google Play Billing لإدارة الوصول؛ بيانات البطاقة تُعالج لدى Google Play لا داخل RCKeyboard.</td></tr>
+<tr><td>البريد الإلكتروني ورسالة الدعم</td><td>فقط إذا راسلتنا</td><td>تُستخدم للرد على طلبك وفحص المشكلة التي تختار الإبلاغ عنها.</td></tr>
+</tbody></table></div>
+<p>قد تتضمن النصوص التي ترسلها بنفسك للترجمة أو الدعم أسماء وعناوين بريد إلكتروني وأرقام هاتف وروابط أو معلومات حساسة أخرى. يُرجى تجنّب إرسال معلومات سرية إلا عند الضرورة.</p>
+</section><section id="ar-typing" class="policy-section"><div class="section-kicker">03 / 16</div><h2>الكتابة والتعلّم والحقول الحساسة</h2>
+<p>تعمل الكتابة المعتادة وتخطيطات اللغات والإيموجي والتنبؤ بالكلمات والتصحيح والاختصارات والثيمات والإعدادات والقاموس الشخصي أساسًا على جهازك. وقد تُحفظ الكلمات المتعلَّمة وسياق الاقتراحات محليًا لتحسين الكتابة.</p>
+<p>يتضمن التطبيق وسائل للحد من التعلّم والاقتراحات في حقول كلمات المرور وغيرها من الحقول الحساسة، ويحترم في بعض الحالات طلب التطبيق المكتوب بداخله عدم التعلّم الشخصي. كما يحد وضع التصفح الخاص/Incognito من التعلّم المحلي حيثما توفّر. تعتمد فعالية ذلك جزئيًا على معلومات الحقل التي يوفّرها Android والتطبيق الآخر.</p>
+<p><strong>لا نُشغّل خدمة تابعة لـRCKeyboard ترفع سجل ضغطات المفاتيح بالكامل بشكل روتيني لأغراض التنميط أو الإعلانات.</strong> لكن بعض الإجراءات، مثل الترجمة التي تطلبها أو مدقق الإملاء في الجهاز، قد تعتمد على خدمات خارجية كما هو موضح لاحقًا.</p>
+</section><section id="ar-clipboard" class="policy-section"><div class="section-kicker">04 / 16</div><h2>سجل الحافظة والاختصارات النصية</h2>
+<p>عندما تكون لوحة المفاتيح نشطة وتُستخدم ميزات الحافظة، يمكن لـRCKeyboard قراءة النصوص المؤهلة وتكوين سجل داخل قاعدة بيانات محلية. ويمنع الكود القراءة التلقائية للعناصر التي يحددها Android بأنها حساسة، ويحدّ من مزامنة الحافظة في بعض الحقول الحساسة أو الأوضاع الخاصة.</p>
+<p>تُشفّر عناصر الحافظة قبل حفظها محليًا. ويمكنك إدارة العناصر وحذفها وتثبيتها والاستفادة من إعدادات الاحتفاظ المتاحة. عند تفعيل الحذف التلقائي، تُجدول إزالة العناصر غير المثبّتة بعد نحو ساعة، أما المثبّتة فلا تنطبق عليها هذه المهلة. وعند تعطيل الإعداد، قد تبقى العناصر لحين حذفها أو مسح بيانات التطبيق.</p>
+<p>تُخزّن الاختصارات النصية التي تنشئها ونصوصها الموسعة محليًا. <strong>لا تُرسل هذه الوظائف محتوى الحافظة أو الاختصارات إلى سيرفرات المطوّر.</strong> أما لصق المحتوى أو مشاركته في تطبيق آخر فتحكمه سياسة التطبيق المستقبِل.</p>
+</section><section id="ar-media" class="policy-section"><div class="section-kicker">05 / 16</div><h2>استوديو الملصقات والصور والخطوط والتخصيص</h2>
+<p>يمكنك اختيار صور لخلفيات الكيبورد أو أشكال الأزرار والأيقونات أو لإنشاء الملصقات. كما يمكنك اختيار خطوط وحزم إيموجي وملفات ثيم ZIP وغيرها من الملفات المدعومة للاستيراد أو التعديل أو التصدير. وقد يحتفظ التطبيق بنسخ من الملفات التي اخترتها ومشاريع الملصقات والإعدادات في مساحة التخزين الخاصة به.</p>
+<p>يستخدم استوديو الملصقات <strong>Google ML Kit</strong> لإزالة الخلفية بتحديد العنصر. وتتم عملية تقسيم الصورة في الكود الذي راجعناه على الجهاز؛ وقد تُحمّل مكوّنات Google/ML Kit النماذج أو تتبادل طلبات تقنية مرتبطة بها. ولا يحتوي الكود المفحوص على نقطة رفع صور يديرها مطوّر RCKeyboard لهذا الغرض.</p>
+<p>إذا أدرجت ملصقًا في محادثة أو شاركت ملفًا أو اخترت موقع حفظ سحابيًا، فقد يحصل التطبيق أو مزوّد التخزين المستقبِل على المحتوى الذي اخترته وتطبق سياسته الخاصة. وفتح أداة اختيار صور Android لا يعني بحد ذاته أن التطبيق يطّلع على مكتبة الصور بالكامل.</p>
+</section><section id="ar-downloads" class="policy-section"><div class="section-kicker">06 / 16</div><h2>تنزيل الثيمات والإيموجي وحزم اللغات</h2>
+<p>يتصل RCKeyboard بمصادر محتوى خارجية، منها <strong>الموارد المستضافة على GitHub</strong>، للحصول على فهرس الثيمات ومعايناتها والثيمات المختارة وخطوط الإيموجي وموارد اللغات والاقتراحات. ويمكن أيضًا استيراد بعض الملفات التي تختارها بنفسك.</p>
+<p>قد يتلقى مزود الاستضافة معلومات اتصال عادية مثل عنوان IP ووقت الطلب وبيانات HTTP التقنية، وقد يحتفظ بسجلات وفقًا لسياسته. الهدف من هذه الطلبات هو تنزيل المحتوى، وليس رفع سجل كتابتك المعتاد.</p>
+</section><section id="ar-translation" class="policy-section"><div class="section-kicker">07 / 16</div><h2>الترجمة عبر الإنترنت — إفصاح مهم</h2>
+<p><strong>الترجمة اختيارية ولا تتم إلا بطلب المستخدم.</strong> إذا أدخلت نصًا في واجهة الترجمة وضغطت الترجمة، يرسل التطبيق النص ولغات الترجمة المختارة إلى خدمة خارجية. يحاول التنفيذ الحالي استخدام <strong>خدمات ترجمة Google</strong>، وقد يستخدم <strong>MyMemory</strong> للنصوص القصيرة المناسبة كحل احتياطي عند فشل الخيارات الأخرى.</p>
+<p><strong>قد يتضمن النص المُرسل عنوان بريد إلكتروني أو اسمًا أو رقم هاتف أو محتوى رسالة أو معلومات حساسة، إذا كتبتها أو لصقتها بنفسك داخل الترجمة.</strong> لا يتطلب ذلك قراءة عنوان البريد من حساب Google الخاص بك. تجنّب إرسال كلمات المرور والمعلومات المالية والرسائل السرية إلى الترجمة عبر الإنترنت.</p>
+<p>تستخدم طلبات الترجمة اتصالات HTTPS بحسب الكود المفحوص. وقد تعالج الجهات المزودة للنصوص عنوان IP والمعلومات التقنية وتحتفظ بها طبقًا لسياساتها، ولا يتحكم RCKeyboard في مدد احتفاظ هذه الجهات. الكتابة العادية بالكيبورد لا تُرسل تلقائيًا إلى خدمات الترجمة.</p>
+</section><section id="ar-ads" class="policy-section"><div class="section-kicker">08 / 16</div><h2>الإعلانات لفتح الثيمات — دون مكافآت مالية</h2>
+<p>يمكن فتح بعض الثيمات عبر <strong>اختيار مشاهدة إعلانات</strong>. وهذه المشاهدة تمنح وصولًا مؤقتًا للثيم المختار؛ <strong>ولا يحصل المستخدم على أموال أو نقاط نقدية أو جوائز قابلة للتحويل</strong>. يتطلب التنفيذ الحالي إكمال مشاهدتين ويفتح الثيم لمدة ثلاثة أيام، وقد يختلف وصول مشتركي Premium حسب ما يظهر داخل التطبيق.</p>
+<p>يستخدم RCKeyboard مكتبة <strong>Google Mobile Ads (AdMob)</strong>. ويمكن للمكتبة تحميل الإعلانات مسبقًا عند فتح متجر الثيمات <strong>قبل أن تختار المشاهدة</strong>. وتوضح Google أن مكتبتها قد تجمع أو تشارك معلومات مثل عنوان IP (الذي قد يدل على منطقة تقريبية)، وتفاعلات التطبيق بما فيها مشاهدات الإعلانات، ومعلومات التشخيص، ومعرفات الجهاز/الحساب ومنها معرّف الإعلانات على Android عند توفره، لأغراض الإعلانات والتحليلات ومنع الاحتيال.</p>
+<p>تخضع معالجة هذه البيانات لمكتبة Google وسياساتها وإعدادات الإعلانات. ولا ندّعي أن أي بيانات لا تغادر الجهاز لمجرد أن المشاهدة اختيارية. ويمكنك عدم مشاهدة الإعلانات، لكن بعض الثيمات ستظل مغلقة ما لم تتوفر طريقة أخرى للوصول إليها.</p>
+</section><section id="ar-premium" class="policy-section"><div class="section-kicker">09 / 16</div><h2>اشتراكات Premium والفوترة عبر Google Play</h2>
+<p>تُدار الميزات المدفوعة واستحقاقات الاشتراك عبر <strong>Google Play Billing</strong>. يفحص التطبيق حالة الاشتراك ومعرفات المنتجات ومعلومات الاستحقاق لتفعيل الميزات أو استعادتها أو إلغائها. تعالج Google Play الدفع وبياناته؛ ولا يطلب RCKeyboard رقم بطاقتك أو رمز CVV.</p>
+<p>قد تعالج Google معلومات الحساب والمعاملات وفق سياساتها. وتخضع أسعار الاشتراكات وتجديدها وإلغاؤها وأهلية الاسترداد للمعلومات المعروضة عند الدفع وشروط Google Play والقانون الساري. ولا تَعِد هذه السياسة باسترداد خارج تلك الشروط.</p>
+</section><section id="ar-system" class="policy-section"><div class="section-kicker">10 / 16</div><h2>مدقق إملاء Android والميكروفون والتطبيقات الأخرى</h2>
+<p><strong>مدقق الإملاء:</strong> إذا لم يجد RCKeyboard اقتراحًا واثقًا في قاموسه، فقد يُرسل الكلمة المعنية إلى خدمة التدقيق الإملائي التي اخترتها على جهازك عبر Android. وقد تعالجها هذه الخدمة محليًا أو عبر الإنترنت حسب المزوّد؛ راجع سياسته.</p>
+<p><strong>زر الميكروفون:</strong> يحوّلك الزر إلى وسيلة إدخال صوتي مثبتة على الجهاز أو يفتح قائمة اختيار وسيلة الإدخال. ولا يسجل كود RCKeyboard المفحوص الصوت بنفسه للتعرّف على الكلام. وتخضع خدمة الصوت المختارة لأذوناتها وسياساتها.</p>
+<p><strong>المشاركة والروابط:</strong> عند إرسال نص أو ملصق أو ملف مُصدَّر إلى تطبيق آخر، أو اختيار تخزين سحابي، أو فتح Google Play، أو كتابة رسالة في تطبيق البريد، يتعامل التطبيق أو المزوّد الخارجي مع البيانات وفق سياسته.</p>
+</section><section id="ar-sharing" class="policy-section"><div class="section-kicker">11 / 16</div><h2>الجهات الخارجية وأغراض مشاركة البيانات</h2>
+<p>تشمل الجهات الخارجية ذات الصلة بالتطبيق:</p><ul>
+<li><strong>Google Mobile Ads / AdMob:</strong> تحميل الإعلانات وعرضها وقياسها ومعالجة بيانات الإعلانات والتحليلات ومنع الاحتيال.</li>
+<li><strong>Google Play Billing والتحديثات داخل التطبيق:</strong> الاشتراكات والاستحقاقات وتحديث التطبيق.</li>
+<li><strong>خدمات ترجمة Google وMyMemory:</strong> معالجة النصوص التي تطلب ترجمتها بشكل صريح.</li>
+<li><strong>GitHub ومصادر التنزيل المرتبطة:</strong> توفير الثيمات وحزم الإيموجي واللغات وتسجيل بيانات اتصال تقنية معتادة.</li>
+<li><strong>Google ML Kit وخدمات Android/Google Play:</strong> تقسيم الصور محليًا وتوزيع النماذج أو وظائف النظام حسب الحالة.</li>
+<li><strong>مزودات الصوت والتدقيق والبريد والملفات والمشاركة المحددة على Android:</strong> عند استدعاء تلك الميزات ووفق طريقة عمل المزوّد.</li></ul>
+<p>لا ندير نشاطًا لبيع الرسائل المكتوبة أو سجل الحافظة المحلي. وقد تعالج جهات الإعلان والخدمات بيانات وفق شروطها، ويجب التمييز بين هذه المعالجة وبين ما يصل مباشرة إلى المطور.</p>
+</section><section id="ar-retention" class="policy-section"><div class="section-kicker">12 / 16</div><h2>التخزين والاحتفاظ والأمان</h2>
+<p>قد تبقى بيانات التعلّم والقاموس والاختصارات والثيمات والملصقات والملفات المحمّلة والإعدادات على الجهاز حتى تحذفها أو تستبدلها أو تمسح بيانات التطبيق أو تزيله. تستخدم بعض قواعد البيانات وعناصر الحافظة تشفيرًا، ويتضمن الكود دعمًا لتشفير قاعدة البيانات. ولا يمكن ضمان أن كل ملف مُصدَّر أو نسخة احتياطية أو وجهة خارجية مشفرة بالطريقة نفسها.</p>
+<p>قد يحذف إعداد انتهاء صلاحية الحافظة الاختياري العناصر غير المثبتة بعد نحو ساعة. وينتهي الوصول المؤقت للثيم المفتوح بالإعلانات حاليًا بعد ثلاثة أيام؛ وهذه مدة للوصول وليست مهلة لحذف كل سجل إعلاني مرتبط.</p>
+<p>قد تُطبق الجهات الخارجية سياساتها الخاصة للاحتفاظ والسجلات والأمان والحذف. ولا يضمن حذف RCKeyboard حذف البيانات التي تتحكم فيها تلك الجهات. تستخدم طلبات الترجمة والتنزيل المفحوصة HTTPS، لكن لا يوجد اتصال أو نظام تخزين يمكن ضمان أمانه المطلق.</p>
+</section><section id="ar-controls" class="policy-section"><div class="section-kicker">13 / 16</div><h2>خياراتك وطلبات الوصول والحذف</h2>
+<ul>
+<li>يمكنك استخدام لوحة المفاتيح دون طلب ترجمة عبر الإنترنت أو تنزيلات اختيارية أو مشاهدة إعلانات لفتح الثيمات متى لم تكن محتاجًا لهذه الميزات.</li>
+<li>يمكنك إدارة الكلمات المتعلّمة والقواميس والاختصارات والحافظة والملصقات والتخصيص من الإعدادات المتاحة وحذف العناصر المفردة حيثما أمكن.</li>
+<li>يمكنك ضبط معرفات الإعلانات وخيارات خصوصيتها المتاحة عبر إعدادات Android/Google، بحسب المنطقة والجهاز.</li>
+<li>يمكنك حذف بيانات التطبيق المحلية من إعدادات Android أو بإزالة RCKeyboard. وقد تحتاج الملفات التي صدّرتها والرسائل التي أرسلتها وبيانات الأطراف الخارجية إلى حذف منفصل.</li>
+<li>للاستفسارات أو طلب حذف معلومات يتحكم فيها المطور، راسل <a href="mailto:omar.mohamed.flutter@gmail.com?subject=RCKeyboard%20Privacy%20Request">omar.mohamed.flutter@gmail.com</a>. اشرح طلبك دون إرسال كلمات مرور أو نصوص حساسة. سنراجع الطلب وفق القانون الساري، لكن لا يمكننا حذف سجلات تتحكم فيها Google أو GitHub أو خدمات الترجمة أو التطبيقات المستقبِلة بصورة مستقلة.</li>
+</ul>
+</section><section id="ar-children" class="policy-section"><div class="section-kicker">14 / 16</div><h2>الأطفال والمعلومات الحساسة</h2>
+<p>RCKeyboard أداة إدخال نصوص عامة وليست خدمة مصمّمة خصيصًا للأطفال. إذا كنت تشرف على جهاز قاصر، راجع إعدادات Android/Google وفكر في الحد من الترجمة المتصلة بالإنترنت والإعلانات وغيرها من الخدمات الخارجية حسب الحاجة. لا تُرسل بيانات الأطفال الشخصية أو كلمات المرور أو بيانات الدفع أو المعلومات الطبية أو النصوص السرية إلى خدمات الترجمة الاختيارية.</p>
+</section><section id="ar-changes" class="policy-section"><div class="section-kicker">15 / 16</div><h2>تعديلات هذه السياسة</h2>
+<p>قد نحدّث هذه السياسة إذا تغير التطبيق أو المكتبات الخارجية أو الخدمات أو المتطلبات القانونية. وستنعكس التغييرات الجوهرية في هذه الصفحة مع تحديث تاريخ المراجعة. ويُدار إفصاح «أمان البيانات» على Google Play بصورة منفصلة ويجب أن يعكس جمع البيانات ومشاركتها في الإصدارات المنشورة.</p>
+</section><section id="ar-contact" class="policy-section"><div class="section-kicker">16 / 16</div><h2>المطوّر ووسيلة التواصل</h2>
+<p><strong>التطبيق:</strong> RCKeyboard لأندرويد (<code>rc.keyboard</code>)</p>
+<p><strong>المطوّر:</strong> Omar Shawkey</p>
+<p><strong>التواصل بشأن الخصوصية:</strong> <a href="mailto:omar.mohamed.flutter@gmail.com">omar.mohamed.flutter@gmail.com</a></p>
+<p><strong>معلومات الجهات الخارجية:</strong> <a target="_blank" rel="noopener noreferrer" href="https://policies.google.com/privacy">سياسة Google</a> · <a target="_blank" rel="noopener noreferrer" href="https://policies.google.com/technologies/ads">تقنيات إعلانات Google</a> · <a target="_blank" rel="noopener noreferrer" href="https://docs.github.com/en/site-policy/privacy-policies/github-general-privacy-statement">خصوصية GitHub</a> · <a target="_blank" rel="noopener noreferrer" href="https://mymemory.translated.net/">MyMemory</a>.</p>
+</section></main></div></div>
+<footer class="footer"><span>© 2026 RCKeyboard · Omar Shawkey</span><span id="footer-text">Privacy inquiries: <a href="mailto:omar.mohamed.flutter@gmail.com">omar.mohamed.flutter@gmail.com</a></span></footer>
 </div>
-
+<script>
+(function(){
+ const copy={en:{title:'Privacy Policy',subtitle:'How RCKeyboard handles your typing data, device content, online translation, ads, subscriptions and other connected services.',date:'Updated November 20, 2026',one:'Local-first keyboard',oneCopy:'Everyday typing and personalization are handled primarily on your device.',two:'Optional online services',twoCopy:'Translation and downloads connect to external providers.',three:'Ads unlock themes',threeCopy:'Watching an ad opens theme access, not a cash reward. AdMob may process device data.'},ar:{title:'سياسة الخصوصية',subtitle:'كيف يتعامل RCKeyboard مع بيانات الكتابة ومحتوى الجهاز والترجمة عبر الإنترنت والإعلانات والاشتراكات والخدمات الأخرى.',date:'آخر تحديث: 20 نوفمبر 2026',one:'لوحة مفاتيح محلية بالأساس',oneCopy:'تُعالج الكتابة اليومية والتخصيص أساسًا على جهازك.',two:'خدمات متصلة اختيارية',twoCopy:'تستخدم الترجمة والتنزيلات مزودين خارجيين.',three:'الإعلانات لفتح الثيمات',threeCopy:'المشاهدة تفتح الثيم ولا تمنح مكافأة مالية، وقد تعالج AdMob بيانات الجهاز.'}};
+ function setLanguage(lang){const c=copy[lang];document.documentElement.lang=lang;document.documentElement.dir=lang==='ar'?'rtl':'ltr';for(const k of ['en','ar']){document.getElementById('panel-'+k).hidden=k!==lang;document.getElementById('btn-'+k).setAttribute('aria-pressed',String(k===lang));}const map={'hero-title':c.title,'hero-subtitle':c.subtitle,'updated-pill':c.date,'h1-title':c.one,'h1-copy':c.oneCopy,'h2-title':c.two,'h2-copy':c.twoCopy,'h3-title':c.three,'h3-copy':c.threeCopy};for(const id in map)document.getElementById(id).textContent=map[id];document.title=(lang==='ar'?'سياسة الخصوصية':'Privacy Policy')+' · RCKeyboard';if(location.hash && location.hash.startsWith('#'+(lang==='en'?'ar':'en')+'-')){const old=lang==='en'?'ar':'en';history.replaceState(null,'',location.hash.replace('#'+old+'-','#'+lang+'-'));}}
+ document.getElementById('btn-en').addEventListener('click',()=>setLanguage('en'));document.getElementById('btn-ar').addEventListener('click',()=>setLanguage('ar'));
+ if(navigator.language.toLowerCase().startsWith('ar'))setLanguage('ar');
+})();
+</script>
 </body>
 </html>
